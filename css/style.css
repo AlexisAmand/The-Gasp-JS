@@ -1,6 +1,5 @@
 body 
 	{
-	/* background-image:url('../images/wood.jpg'); */
 	background-image:url('../images/fond01.jpg');
 	}
 	
@@ -10,7 +9,8 @@ body
 	
 img 
 	{
-	width:115px;
+	/* width:115px; */
+	width:100%;
 	}
 	
 .H 
