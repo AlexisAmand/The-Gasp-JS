@@ -2,7 +2,8 @@
 
 function NouvellePartie()
 	{
-	document.Info.coups.value = 0;
+	nbCoups = 0;
+	document.Info.coups.value = nbCoups;
 	
 	$('#ModalNouvellePartie').modal('hide');
 	
