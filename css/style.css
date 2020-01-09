@@ -1,24 +1,24 @@
-	
-	body {
-	background-image:url('../images/wood.jpg');
+body 
+	{
+	/* background-image:url('../images/wood.jpg'); */
+	background-image:url('../images/fond01.jpg');
 	}
 	
-	.container {
-	/* background-image:url('../images/fond04.jpg'); */
+.container 
+	{
 	}
 	
-	img {
+img 
+	{
 	width:115px;
 	}
 	
-	.H
+.H 
 	{
-	display:none;
+	display:none; 
 	}
 	
-	.col
+.col
 	{
-	/* border:1px solid black; */
 	text-align:center;
 	}
-	

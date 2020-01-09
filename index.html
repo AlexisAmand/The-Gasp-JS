@@ -19,15 +19,11 @@
 
 <div class="container">
 
-	<div class="row">
-		
-		<div class="col col-md-12 text-center text-white">
-			<h1>The Gasp</h1>
-			<p>Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle.<br /> 
-			Saurez-vous toutes les retourner ?</p>
-		</div>
-			
-	</div>
+
+
+	<section class="row">
+	
+	<article class="col-md-9">
 		
 	<div class="row mt-5">
 	
@@ -196,23 +192,116 @@
 		</div>
 	
 	</div>
+	
+	</article>
+	
+	<aside class="col-md-3">
+	
+	<div class="card mt-5" style="width: 18rem;">
+			<div class="card-body text-center">   	
+		    	
+		    	<h1>The Gasp JS</h1>
+		    	
+				<p class="text-center">Version 0.6.8</p> 	
+		  	</div>
+		</div>
+	
+	
+	
+		<div  class="card mt-5" style="width: 18rem;">
 		
-		<div class="row justify-content-between mt-5">
-		    <div class="col-4">
-		      <FORM NAME="Info">				  	
-				  	<div class="form-group row text-center text-white">
-				    	<label for="Score" class="col-sm-5 col-form-label">Nombre de coups</label>
-				    	<div class="col-sm-7">
-				      	<input type="text" NAME="coups" class="form-control">
-				    	</div>
-  					</div>				  	
-				</FORM>	
-		    </div>
-		    <div class="col-4 text-center text-white">
-		      Le record actuel est 10 !
-		    </div>
-	  	</div>
+			<div class="card-header">Votre partie</div>
+		
+		  		<ul class="list-group list-group-flush">
+		  
+		    		<li class="list-group-item">
+				    
+		    			<FORM NAME="Info">				  	
+				  			<div class="form-group">
+				    			<label for="Score" class="col-form-label">Nombre de coups</label>
+				    			<div class="">
+				      			<input type="text" NAME="coups" class="form-control">
+				    			</div>
+  							</div>				  	
+						</FORM>	
+		    
+		    	    </li>
+		    		<li class="list-group-item text-center">Le record actuel est 10 coups !</li>
+		    		<!-- >li class="list-group-item text-center">Votre record perso est XX coups !</li -->
+		  		</ul>
+			
+		</div>
+		
+		<div class="card mt-5" style="width: 18rem;">
+			<div class="card-body text-center">   	
+		    	<!-- Ce bouton affiche la modal pour la nouvelle partie -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalNouvellePartie">
+				  Nouvelle partie
+				</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalApropos">
+				  A Propos
+				</button>
+		  	</div>
+		</div>
+	
+	</aside>
+	
+	</section>
+		
+	<footer class="row justify-content-between mt-5">
+		<div class="col-md-12">
+		
+		</div> 
+	</footer>
+	
+	<!-- Modal pour la nouvelle partie -->
+	
+	<div class="modal fade" id="ModalNouvellePartie" tabindex="-1" role="dialog" aria-labelledby="ModalNouvellePartie" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="ModalNouvellePartie">Nouvelle partie</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        Etes-vous certain de vouloir commencer une nouvelle partie ?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+	        <button type="button" class="btn btn-primary" onclick="NouvellePartie()">Oui</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Modal pour la fenêtre apropos -->
+	
+	<div class="modal fade" id="ModalApropos" tabindex="-1" role="dialog" aria-labelledby="ModalApropos" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="ModalApropos">A Propos</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p>Il y a quelques mois, j'ai découvert un petit listing en Basic paru dans le n°38 de Jeux et Stratégie d'avril/mai 1985. Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule régle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne.</p>
 
+			<p>Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, aujourd'hui nous appelerions ça un jeu en "mode console". Dans ma version, les pions sont remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
+
+			<p class="text-center">Le code est disponible sur GitHub<br><a href="https://github.com/AlexisAmand/The-Gasp-JS">https://github.com/AlexisAmand/The-Gasp-JS</a></p>
+			
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -220,6 +309,22 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 <script src="js/thegasp.js"></script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//genealexis.fr/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 
 </body>
 
