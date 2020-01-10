@@ -5,15 +5,15 @@
 
 	<meta charset="utf-8">
 
-	<title>The Gasp - Version Javascript</title>
+	<title>The Gasp - Saurez-vous toutes les retourner ? (version Javascript)</title>
 	<meta name="description" content="The Gasp est un jeu de cartes gratuit pour jouer en solitaire sur PC. C'est un casse-tête qui mélange les jeux Reverso et Othello.">
 	
 	<link rel="stylesheet" href="css/style.css">
 		
-	<!-- Bootstrap -->
-	
-	<!-- >link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"-->
-	<link rel="stylesheet" href="css/bootstrap.min.css">	
+	<!-- Theme Cosmo pour Bootstrap -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+		
 </head>
 
 <body>
@@ -108,7 +108,7 @@
 	
 	</div>
 	
-		<div class="row">
+	<div class="row">
 		
 		<div class="col-md-2">
 			<img id="carte30" src="#" onClick="retourne(3,0);"  class="H">
@@ -136,7 +136,7 @@
 	
 	</div>
 	
-		<div class="row">
+	<div class="row">
 		
 		<div class="col-md-2">
 			<img id="carte40" src="#" onClick="retourne(4,0);"  class="H">
@@ -164,7 +164,7 @@
 	
 	</div>
 	
-		<div class="row">
+	<div class="row">
 		
 		<div class="col-md-2">
 			<img id="carte50" src="#" onClick="retourne(5,0);"  class="H">
@@ -199,7 +199,7 @@
 		<header class="card mt-5" style="width: 18rem;">
 			<div class="card-body text-center">   	
 				<h1>The Gasp JS</h1>
-				<p>Version 0.6.23</p>
+				<p>Version 0.6.26</p>
 				<small>(Optimisé pour une résolution 1920 x 1080)</small>
 			</div>
 		</header>
@@ -208,25 +208,25 @@
 			 <div class="card-header">Votre partie</div>
 			 <div class="card-body">
 		
-			 <FORM NAME="Info">				  	
+			 <form name="Info">				  	
 				<div class="form-group">
 					<label for="Score" class="col-form-label">Nombre de coups</label>
 					<div class="">
 					<input type="text" NAME="coups" class="form-control">
 					</div>
 	  			</div>				  	
-			</FORM>	
+			</form>	
 			<p class="text-center mt-4">Le record actuel est 10 coups !</p>
-			<!-- >p class="list-group-item text-center">Votre record perso est XX coups !</p -->
 			</div>
 		</div>
 					
 		<div class="card mt-5" style="width: 18rem;">
 			<div class="card-body text-center">   	
-		    	<!-- Ce bouton affiche la modal pour la nouvelle partie -->
+		    	<!-- Ce bouton affiche la fenêtre modale "nouvelle partie" -->
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalNouvellePartie">
 				  Nouvelle partie
 				</button>
+				<!-- Ce bouton affiche la fenêtre modale "a propos" -->
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalApropos">
 				  A Propos
 				</button>
@@ -243,7 +243,7 @@
 		</div> 
 	</footer>
 	
-	<!-- Modal pour la nouvelle partie -->
+	<!-- Fenêtre modale pour la nouvelle partie -->
 	
 	<div class="modal fade" id="ModalNouvellePartie" tabindex="-1" role="dialog" aria-labelledby="ModalNouvellePartieLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered " role="document">
@@ -265,7 +265,7 @@
 	  </div>
 	</div>
 	
-	<!-- Modal pour la fenêtre apropos -->
+	<!-- Fenêtre modale pour la fenêtre apropos -->
 	
 	<div class="modal fade" id="ModalApropos" tabindex="-1" role="dialog" aria-labelledby="ModalAproposLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered" role="document">
@@ -277,11 +277,12 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <p>Il y a quelques mois, j'ai découvert un petit listing en Basic paru dans le n°38 de Jeux et Stratégie d'avril/mai 1985. Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule régle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne.</p>
+	        <p>Il y a quelques mois, j'ai découvert un petit listing en Basic paru dans le n°38 de Jeux et Stratégie d'avril/mai 1985. Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule règle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne.</p>
 
-			<p>Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, aujourd'hui nous appelerions ça un jeu en "mode console". Dans ma version, les pions sont remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
+			<p>Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, aujourd'hui nous nous appellerions ça un jeu en "mode console". Dans ma version, les pions ont été remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
 
-			<p class="text-center">Le code est disponible sur GitHub<br><a href="https://github.com/AlexisAmand/The-Gasp-JS">https://github.com/AlexisAmand/The-Gasp-JS</a></p>
+			<p class="text-center">Le code est disponible sur GitHub<br><a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu The Gasp en JavaScript sur GitHub">
+			https://github.com/AlexisAmand/The-Gasp-JS</a></p>
 			
 			<p class="text-center">Le theme Cosmo pour Bootstrap est disponible sur Github<br><a href="https://github.com/thomaspark/bootswatch">https://github.com/thomaspark/bootswatch</a></p>
 			
