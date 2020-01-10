@@ -4,7 +4,11 @@ Version en JavaScript, d'après un article sur le basic paru dans Jeux & Straté
 
 Ce jeu est jouable en ligne gratuitement via un navigateur web.
 
-![alt text](http://thegasp.genealexis.fr/images/thumbs/thegasp.jpg)
+![alt text](http://thegasp.genealexis.fr/images/js/thegasp01.jpg)
+
+![alt text](http://thegasp.genealexis.fr/images/js/thegasp02.jpg)
+
+![alt text](http://thegasp.genealexis.fr/images/js/thegasp03.jpg)
 
 La règle de ce jeu en solitaire est simple.
 
