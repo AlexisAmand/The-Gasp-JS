@@ -22,3 +22,8 @@ img
 	{
 	text-align:center;
 	}
+
+#ModalOptions img
+	{
+	width: 70px;	
+	}

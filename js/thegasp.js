@@ -1,4 +1,6 @@
+/* --------------- */
 /* Nouvelle partie */
+/* --------------- */
 
 function NouvellePartie()
 	{
@@ -6,22 +8,56 @@ function NouvellePartie()
 	document.Info.coups.value = nbCoups;
 	
 	$('#ModalNouvellePartie').modal('hide');
-	
-	//alert('Nouvelle partie !');
-	
+		
 	for (var y = 0; y < 6; y++)
 		{
 		
 		for (var x = 0; x < 6; x++)
 			{
-				document.getElementById("carte" + x.toString() + y.toString()).src = "images/back.png";
+				document.getElementById("carte" + x.toString() + y.toString()).src = dos;
 				grille[x][y] = "O";
 
 			}
 		}
 	}
-	 
-/* A chaque coups, cette fonction vérifie la grille, pour voir si le joueur a gagné  */
+
+/* ---------------------------------------- */
+/* Choix d'un deck dans les options de jeux */
+/* ---------------------------------------- */
+
+function mark(el) 
+	{
+
+	/* la variable dos prend comme valeur le chemin vers l'image que l'on a choisi */
+
+	dos = el.src;
+
+	/* gestion du cadre bleu autour des images dans la modale des options */
+
+	for (var a = 1; a < 7; a++)
+		{
+		document.getElementById(a).style.border = "0px solid blue";
+		}
+
+		el.style.border = "1px solid blue";
+
+	/* on change le deck dans la partie en cours */	
+
+	for (var y = 0; y < 6; y++)
+		{	
+		for (var x = 0; x < 6; x++)
+			{
+				if (grille[x][y] == "O")
+					{
+					document.getElementById("carte" + x.toString() + y.toString()).src = dos;
+					}	
+			}
+		}
+	}	
+
+/* -------------------------------------------------------------------------------- */
+/* A chaque coups, cette fonction vérifie la grille, pour voir si le joueur a gagné */
+/* -------------------------------------------------------------------------------- */
 	
 function VerificationGrille()
 	{
@@ -43,8 +79,10 @@ function VerificationGrille()
 		}
 
 	}
-	
+
+/* ----------------------------------*/
 /* cette fonction retourne une carte */
+/* ----------------------------------*/
 	
 function retourne(xc, yc)
 	{
@@ -62,7 +100,7 @@ function retourne(xc, yc)
 					}
 				else
 					{
-					document.getElementById("carte" + x.toString() + y.toString()).src = "images/back.png";
+					document.getElementById("carte" + x.toString() + y.toString()).src = dos;
 					grille[x][y] = "O";
 					}
 				}
@@ -75,7 +113,7 @@ function retourne(xc, yc)
 			}
 		else
 			{
-			document.getElementById("carte" + xc.toString() + yc.toString()).src = "images/back.png";
+			document.getElementById("carte" + xc.toString() + yc.toString()).src = dos;
 			grille[xc][yc] = "O";
 			}	
 
@@ -89,6 +127,7 @@ document.Info.coups.value = "0";
 	
 // création de la grille de jeu
 var grille = new Array();
+var dos = "images/backs/back.png";
 
 // initialisation de la grille. 
 // Elle fait 9x9 mais 6x6 pourrait être suffisant.
