@@ -1,9 +1,27 @@
+/* ---------------------------------------- */
+/* Choix d'un fond dans les options de jeux */
+/* ---------------------------------------- */
+
+function OptionWallpaper(el) 
+	{
+
+	for (var a = 11; a < 16; a++)
+		{
+		document.getElementById(a).style.border = "0px solid blue";
+		}
+
+	el.style.border = "2px solid blue";
+	$('body').css("background-image", 'url("'+el.src+'")');
+	
+	}
+
 /* --------------- */
 /* Nouvelle partie */
 /* --------------- */
 
 function NouvellePartie()
 	{
+
 	nbCoups = 0;
 	document.Info.coups.value = nbCoups;
 	
@@ -39,7 +57,7 @@ function mark(el)
 		document.getElementById(a).style.border = "0px solid blue";
 		}
 
-		el.style.border = "1px solid blue";
+		el.style.border = "2px solid blue";
 
 	/* on change le deck dans la partie en cours */	
 

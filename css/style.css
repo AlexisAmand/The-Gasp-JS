@@ -1,15 +1,16 @@
 body 
 	{
-	background-image:url('../images/fond01.jpg');
+	background-image:url('../images/fonds/fond01.jpg');
 	}
-	
+
+/*
 .container 
 	{
 	}
+*/
 	
 img 
 	{
-	/* width:115px; */
 	width:100%;
 	}
 	
@@ -23,7 +24,13 @@ img
 	text-align:center;
 	}
 
-#ModalOptions img
+	
+#ModalOptions .cartes
 	{
 	width: 70px;	
+	}
+	
+#ModalOptions .fonds
+	{
+	width: 140px;	
 	}

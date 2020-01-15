@@ -199,7 +199,7 @@
 		<header class="card mt-4" style="width: 18rem;">
 			<div class="card-body text-center">   	
 				<h1>The Gasp JS</h1>
-				<p>Version 0.7.1</p>
+				<p>Version 0.7.11</p>
 				<small>(Optimisé pour une résolution 1920 x 1080)</small>
 			</div>
 		</header>
@@ -244,7 +244,7 @@
 		
 	<footer class="row  mt-5">
 		<div class="col-12 text-center mt-5 text-white">
-			<p>Jeu réalisé par <a href="http://www.boitasite.com">Alexis AMAND</a> - Découvrez aussi la <a href="http://www.boitasite.com/thegasp.php">version VB.net</a></p>
+			<p>Jeu réalisé par <a href="http://www.boitasite.com" class="text-white"><u>Alexis AMAND</u></a> - Découvrez aussi la <a href="http://www.boitasite.com/thegasp.php" class="text-white"><u>version VB.net</u></a></p>
 		</div>
 	</footer>
 
@@ -264,15 +264,25 @@
 			
 				<div class="modal-body">
 
-				<p>Choisissez un dos pour vos cartes et cliquez sur 'Ok' pour valider votre choix. Ce changement n'a aucune répercution sur la partie en cours.</p>
+				<p>Choisissez un dos pour vos cartes et/ou un fond d'écran, puis cliquez sur 'Ok' pour valider votre choix. Ce changement n'a aucune répercution sur la partie en cours.</p>
+	
+				<p><strong>Dos de la carte</strong></p>
 
-				<img src="images/backs/back.png" id="1" onclick="mark(this)">	
-				<img src="images/backs/red.png" id="2" onclick="mark(this)">
-				<img src="images/backs/old.png" id="3" onclick="mark(this)">
-				<img src="images/backs/russian.png" id="4" onclick="mark(this)">
-				<img src="images/backs/red2.png" id="5" onclick="mark(this)">
-				<img src="images/backs/suisse.png" id="6" onclick="mark(this)">
+				<img src="images/backs/back.png" id="1" onclick="mark(this)" class="cartes">	
+				<img src="images/backs/red.png" id="2" onclick="mark(this)" class="cartes">
+				<img src="images/backs/old.png" id="3" onclick="mark(this)" class="cartes">
+				<img src="images/backs/russian.png" id="4" onclick="mark(this)" class="cartes">
+				<img src="images/backs/red2.png" id="5" onclick="mark(this)" class="cartes">
+				<img src="images/backs/suisse.png" id="6" onclick="mark(this)" class="cartes">
 
+				<p><strong>Fonds d'écran</strong></p>
+
+				<img src="images/fonds/fond01.jpg" id="11" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/wood.jpg" id="12" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/feuilles.jpg" id="13" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/herbe.jpg" id="14" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/nuage.jpg" id="15" onclick="OptionWallpaper(this)" class="fonds m-1">
+					
 				</div>
 
 				<div class="modal-footer">
@@ -326,10 +336,12 @@
 
 			<p>Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, aujourd'hui nous nous appellerions ça un jeu en "mode console". Dans ma version, les pions ont été remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
 
-			<p class="text-center">Le code est disponible sur GitHub<br><a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu The Gasp en JavaScript sur GitHub">
-			https://github.com/AlexisAmand/The-Gasp-JS</a></p>
+			<p class="text-center">Le code est disponible sur GitHub<br>
+				<a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu The Gasp en JavaScript sur GitHub">
+				https://github.com/AlexisAmand/The-Gasp-JS</a></p>
 			
-			<p class="text-center">Le theme Cosmo pour Bootstrap est disponible sur Github<br><a href="https://github.com/thomaspark/bootswatch">https://github.com/thomaspark/bootswatch</a></p>
+			<p class="text-center">Le theme Cosmo pour Bootstrap est disponible sur Github<br>
+				<a href="https://github.com/thomaspark/bootswatch">https://github.com/thomaspark/bootswatch</a></p>
 			
 	      </div>
 	      <div class="modal-footer text-center">
