@@ -4,12 +4,6 @@ Version en JavaScript, d'après un article sur le basic paru dans Jeux & Straté
 
 Ce jeu est jouable en ligne gratuitement via un navigateur web.
 
-![alt text](http://thegasp.genealexis.fr/images/js/thegasp01.jpg)
-
-![alt text](http://thegasp.genealexis.fr/images/js/thegasp02.jpg)
-
-![alt text](http://thegasp.genealexis.fr/images/js/thegasp03.jpg)
-
 La règle de ce jeu en solitaire est simple.
 
 - Sur une grille 4x4, on dispose des 16 cartes.
@@ -17,3 +11,12 @@ La règle de ce jeu en solitaire est simple.
 - Le but est de retourner toutes les cartes.
 
 A découvrir sur : http://thegasp.genealexis.fr
+
+
+![alt text](http://thegasp.genealexis.fr/images/js/thegasp01.jpg)
+
+![alt text](http://thegasp.genealexis.fr/images/js/thegasp02.jpg)
+
+![alt text](http://thegasp.genealexis.fr/images/js/thegasp03.jpg)
+
+![alt text](http://thegasp.genealexis.fr/images/js/thegasp04.jpg)

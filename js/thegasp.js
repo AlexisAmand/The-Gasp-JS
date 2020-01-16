@@ -5,7 +5,7 @@
 function OptionWallpaper(el) 
 	{
 
-	for (var a = 11; a < 16; a++)
+	for (var a = 11; a < 17; a++)
 		{
 		document.getElementById(a).style.border = "0px solid blue";
 		}

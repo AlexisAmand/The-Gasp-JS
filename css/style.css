@@ -2,12 +2,6 @@ body
 	{
 	background-image:url('../images/fonds/fond01.jpg');
 	}
-
-/*
-.container 
-	{
-	}
-*/
 	
 img 
 	{
@@ -16,21 +10,25 @@ img
 	
 .H 
 	{
-	display:none; 
+	display:none;
 	}
 	
-.col
+.col-md-2
 	{
 	text-align:center;
 	}
 
+.card
+	{
+		width: 18rem;	
+	}	
 	
 #ModalOptions .cartes
 	{
-	width: 70px;	
+	width: 70px;
 	}
 	
 #ModalOptions .fonds
 	{
-	width: 140px;	
+	width: 140px;
 	}
