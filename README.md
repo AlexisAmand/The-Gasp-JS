@@ -13,10 +13,10 @@ La règle de ce jeu en solitaire est simple.
 A découvrir sur : http://thegasp.genealexis.fr
 
 
-![alt text](http://thegasp.genealexis.fr/images/js/thegasp01.jpg)
+![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp01.jpg)
 
-![alt text](http://thegasp.genealexis.fr/images/js/thegasp02.jpg)
+![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp02.jpg)
 
-![alt text](http://thegasp.genealexis.fr/images/js/thegasp03.jpg)
+![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp03.jpg)
 
-![alt text](http://thegasp.genealexis.fr/images/js/thegasp04.jpg)
+![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp04.jpg)

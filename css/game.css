@@ -1,0 +1,39 @@
+body 
+	{
+	background-image:url('../images/fonds/fond01.jpg');
+	}
+	
+img 
+	{
+	width:100%;
+	}
+	
+.H 
+	{
+	display:none;
+	}
+	
+.col-md-2
+	{
+	text-align:center;
+	}
+
+.card
+	{
+		width: 18rem;	
+	}	
+	
+#ModalOptions .cartes
+	{
+	width: 70px;
+	}
+	
+#ModalOptions .fonds
+	{
+	width: 140px;
+	}
+
+small
+	{	
+	font-size: 68%;
+	}

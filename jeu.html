@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>The Gasp - Saurez-vous retourner toutes les cartes ? (version Javascript)</title>
+	<meta name="description" content="The Gasp est un jeu de cartes gratuit pour jouer en solitaire sur PC. C'est un casse-tête qui mélange les jeux Reverso et Othello. Son but est de retourner toutes les cartes avec le moins de coup possible.">
+	
+	<!-- style perso et Bootstrap -->
+
+	<link rel="stylesheet" href="css/game.css">
+	<link rel="stylesheet" href="css/bootstrap.perso.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+	<section class="row">
+	
+	<article class="col-md-9">
+
+		<div class="row justify-content-md-center mt-5">
+	
+		<div class="col-md-auto">
+			<img id="carte00" src="#" onclick="retourne(0,0);" class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte01" src="#" onclick="retourne(0,1);" class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte02" src="#" onclick="retourne(0,2);" class="H" >
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte03" src="#" onclick="retourne(0,3);" class="H">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte04" src="#" onclick="retourne(0,4);" class="H">
+		</div>
+		
+		<div class="col-md-auto">
+			<img id="carte05" src="#" onclick="retourne(0,5);" class="H">
+		</div>
+	
+	</div>
+
+	<div class="row justify-content-md-center">
+		
+		<div class="col-md-auto">
+			<img id="carte10" src="#" onclick="retourne(1,0);"  class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte11" src="images/backs/back.png" onclick="retourne(1,1);">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte12" src="images/backs/back.png" onclick="retourne(1,2);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte13" src="images/backs/back.png" onclick="retourne(1,3);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte14" src="images/backs/back.png" onclick="retourne(1,4);">
+		</div>
+		
+		<div class="col-md-auto">
+			<img id="carte15" src="#" onclick="retourne(1,5);"  class="H">
+		</div>
+	
+	</div>
+
+	<div class="row justify-content-md-center">
+	
+		<div class="col-md-auto">
+			<img id="carte20" src="#" onclick="retourne(2,0);"  class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte21" src="images/backs/back.png" onclick="retourne(2,1);">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte22" src="images/backs/back.png" onclick="retourne(2,2);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte23" src="images/backs/back.png" onclick="retourne(2,3);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte24" src="images/backs/back.png" onclick="retourne(2,4);">
+		</div>
+		
+		<div class="col-md-auto">
+			<img id="carte25" src="#" onclick="retourne(2,5);" class="H">
+		</div>
+	
+	</div>
+	
+	<div class="row justify-content-md-center">
+		
+		<div class="col-md-auto">
+			<img id="carte30" src="#" onclick="retourne(3,0);"  class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte31" src="images/backs/back.png" onclick="retourne(3,1);">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte32" src="images/backs/back.png" onclick="retourne(3,2);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte33" src="images/backs/back.png" onclick="retourne(3,3);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte34" src="images/backs/back.png" onclick="retourne(3,4);">
+		</div>
+		
+		<div class="col-md-auto">
+			<img id="carte35" src="#" onclick="retourne(3,5);"  class="H">
+		</div>
+	
+	</div>
+	
+	<div class="row justify-content-md-center">
+		
+		<div class="col-md-auto">
+			<img id="carte40" src="#" onclick="retourne(4,0);"  class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte41" src="images/backs/back.png" onclick="retourne(4,1);">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte42" src="images/backs/back.png" onclick="retourne(4,2);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte43" src="images/backs/back.png" onclick="retourne(4,3);">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte44" src="images/backs/back.png" onclick="retourne(4,4);">
+		</div>
+		
+		<div class="col-md-auto">
+			<img id="carte45" src="#" onclick="retourne(4,5);"  class="H">
+		</div>
+	
+	</div>
+	
+	<div class="row justify-content-md-center">
+		
+		<div class="col-md-auto">
+			<img id="carte50" src="#" onclick="retourne(5,0);"  class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte51" src="#" onclick="retourne(5,1);"  class="H">
+		</div>
+	
+		<div class="col-md-2">
+			<img id="carte52" src="#" onclick="retourne(5,2);"  class="H">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte53" src="#" onclick="retourne(5,3);" class="H">
+		</div>
+		
+		<div class="col-md-2">
+			<img id="carte54" src="#" onclick="retourne(5,4);"  class="H">
+		</div>
+	
+		<div class="col-md-auto">
+			<img id="carte55" src="#" onclick="retourne(5,5);"  class="H">
+		</div>
+	
+	</div>
+	
+	</article>
+	
+	<aside class="col-md-3">
+	
+		<header class="card mt-4">
+			<div class="card-body text-center">   	
+				<h1><a href="index.html" class="text-body">The Gasp JS</a></h1>
+				<p>Version 0.7.76</p>
+				<small>(Optimisé pour une résolution 1920 x 1080)</small>
+			</div>
+		</header>
+				
+		<div  class="card mt-4">
+			 <div class="card-header">Votre partie</div>
+			 <div class="card-body">
+		
+			 <form name="Info">				  	
+				<div class="form-group">
+					<label for="Score" class="col-form-label">Nombre de coups</label>
+					<div class="">
+					<input type="text" name="coups" class="form-control">
+					</div>
+	  			</div>				  	
+			</form>	
+			<p class="text-center mt-4">Le record actuel est 10 coups !</p>
+			</div>
+		</div>
+					
+		<div class="card mt-4">
+			<div class="card-body text-center">   	
+		    	<!-- Ce bouton affiche la fenêtre modale "nouvelle partie" -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalNouvellePartie">
+					Nouvelle partie
+				</button>
+				<br /><br />
+				<!-- Ce bouton affiche la fenêtre modale "options" -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalOptions">
+					Options
+				</button>
+				<!-- Ce bouton affiche la fenêtre modale "a propos" -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalApropos">
+					Règles
+				</button>
+		  	</div>
+		</div>
+	
+	</aside>
+	
+	</section>
+		
+	<footer class="row  mt-5">
+
+	</footer>
+
+	<!-- Fenêtre modale pour les options -->
+	
+	<div class="modal fade" id="ModalOptions" tabindex="-1" role="dialog" aria-labelledby="ModalOptionsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered " role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="ModalOptionsLabel">Options</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+
+			<form name="formoptions">
+			
+				<div class="modal-body text-justify">
+
+				<p>Choisissez un dos pour vos cartes et/ou un fond d'écran, puis cliquez sur 'Ok' pour valider votre choix. Ce changement n'a aucune répercution sur la partie en cours.</p>
+	
+				<p><strong>Dos de la carte</strong></p>
+
+				<img src="images/backs/back.png" id="1" onclick="mark(this)" class="cartes">	
+				<img src="images/backs/red.png" id="2" onclick="mark(this)" class="cartes">
+				<img src="images/backs/old.png" id="3" onclick="mark(this)" class="cartes">
+				<img src="images/backs/russian.png" id="4" onclick="mark(this)" class="cartes">
+				<img src="images/backs/red2.png" id="5" onclick="mark(this)" class="cartes">
+				<img src="images/backs/suisse.png" id="6" onclick="mark(this)" class="cartes">
+
+				<p class="mt-3"><strong>Fonds d'écran</strong></p>
+
+				<img src="images/fonds/fond01.jpg" id="11" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/wood.jpg" id="12" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/feuilles.jpg" id="13" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<br />
+				<img src="images/fonds/herbe.jpg" id="14" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/nuage.jpg" id="15" onclick="OptionWallpaper(this)" class="fonds m-1">
+				<img src="images/fonds/nebula.jpg" id="16" onclick="OptionWallpaper(this)" class="fonds m-1">
+					
+				</div>
+
+				<div class="modal-footer">
+						
+				<button type="button" class="btn btn-primary" onclick="	$('#ModalOptions').modal('hide');">Fermer</button>
+				
+				</div>
+
+			</form>
+
+		  </div>
+		</div>
+	</div>
+	
+	<!-- Fenêtre modale pour la nouvelle partie -->
+	
+	<div class="modal fade" id="ModalNouvellePartie" tabindex="-1" role="dialog" aria-labelledby="ModalNouvellePartieLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered " role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="ModalNouvellePartieLabel">Nouvelle partie</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body text-justify">
+	        Etes-vous certain(e) de vouloir commencer une nouvelle partie ?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+	        <button type="button" class="btn btn-primary" onclick="NouvellePartie()">Oui</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Fenêtre modale pour la fenêtre apropos -->
+	
+	<div class="modal fade" id="ModalApropos" tabindex="-1" role="dialog" aria-labelledby="ModalAproposLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="ModalAproposLabel">Règles du jeu</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body text-justify">
+
+	        <p>Il y a quelques mois, j'ai découvert un petit listing en Basic paru dans le n°38 de Jeux et Stratégie d'avril/mai 1985. Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule règle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne.</p>
+
+			<p>Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, aujourd'hui nous nous appellerions ça un jeu en "mode console". Dans ma version, les pions ont été remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
+
+			<p class="text-center">Le code source est disponible sur GitHub<br>
+				<a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu The Gasp en JavaScript sur GitHub">
+				https://github.com/AlexisAmand/The-Gasp-JS</a></p>
+			
+			<p class="text-center">Le theme Cosmo pour Bootstrap est disponible sur Github<br>
+				<a href="https://github.com/thomaspark/bootswatch">https://github.com/thomaspark/bootswatch</a></p>
+
+			<p class="text-center">Jeu réalisé par <a href="http://www.boitasite.com"><u>Alexis AMAND</u></a></p>	
+			
+	      </div>
+	      <div class="modal-footer text-center">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/thegasp.js"></script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//genealexis.fr/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+</body>
+</html>
