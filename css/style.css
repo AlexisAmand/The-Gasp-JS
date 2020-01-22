@@ -1,9 +1,64 @@
 body 
 	{
-	background-image:url('../images/fonds/fond01.jpg');
+	/* background-image:url('../images/fonds/fond01.jpg'); */
+	/* background-color:rgba(83, 76, 76, 0.11); */
 	}
 
 small
 	{	
 	font-size: 68%;
+	}
+	
+img 
+{
+width:100%;
+max-width: 115px;
+}
+	
+.H
+	{
+	display:none;
+	}
+	
+.col-3
+	{
+	text-align:center;
+	}
+	
+#ModalOptions .cartes
+	{
+	width: 70px;
+	}
+	
+#ModalOptions .fonds
+	{
+	width: 140px;
+	}
+
+small
+	{	
+	font-size: 68%;
+	}
+
+#titre, #slogan
+	{
+		min-height: 50vh;	
+	}
+
+@media (max-width: 575.98px) 
+	{ 
+	#titre
+		{
+		text-align: center;
+		}
+	
+	#slogan
+		{
+		visibility: hidden;	
+		}
+
+	#titre, #slogan
+		{
+		min-height: 25vh;	
+		}
 	}

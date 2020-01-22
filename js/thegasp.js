@@ -1,27 +1,10 @@
-/* ---------------------------------------- */
-/* Choix d'un fond dans les options de jeux */
-/* ---------------------------------------- */
-
-function OptionWallpaper(el) 
-	{
-
-	for (var a = 11; a < 17; a++)
-		{
-		document.getElementById(a).style.border = "0px solid blue";
-		}
-
-	el.style.border = "2px solid blue";
-	$('body').css("background-image", 'url("'+el.src+'")');
-	
-	}
-
 /* --------------- */
 /* Nouvelle partie */
 /* --------------- */
 
 function NouvellePartie()
 	{
-
+	document.location.href = 'jeu.html';	
 	nbCoups = 0;
 	document.Info.coups.value = nbCoups;
 	
@@ -93,7 +76,12 @@ function VerificationGrille()
 	
 	if (perdu == 16)
 		{
-		alert("Bravo ! Vous avez réussi en " + nbCoups + " coups !");
+		$('#ModalBravo').modal('show');
+
+		$('#ModalBravo').on('shown.bs.modal', function (e) {
+			var modal = $(this)
+			modal.find('.modal-body').text('Vous avez gagné en ' + nbCoups + ' coups !')
+		  })
 		}
 
 	}
@@ -137,6 +125,25 @@ function retourne(xc, yc)
 
 		VerificationGrille();	
 	}
+
+/* ---------------------------------------- */
+/* Choix d'un fond dans les options de jeux */
+/* ---------------------------------------- */
+
+/*
+function OptionWallpaper(el) 
+	{
+
+	for (var a = 11; a < 17; a++)
+		{
+		document.getElementById(a).style.border = "0px solid blue";
+		}
+
+	el.style.border = "2px solid blue";
+	$('body').css("background-image", 'url("'+el.src+'")');
+	
+	}
+*/
 	
 // Initialisation du nombre de coups
 	

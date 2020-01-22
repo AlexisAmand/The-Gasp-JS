@@ -1,6 +1,6 @@
 body 
 	{
-	background-image:url('../images/fonds/fond01.jpg');
+	/* background-image:url('../images/fonds/fond01.jpg'); */
 	}
 	
 img 
@@ -20,7 +20,7 @@ img
 
 .card
 	{
-		width: 18rem;	
+	width: 18rem;	
 	}	
 	
 #ModalOptions .cartes
