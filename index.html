@@ -1,295 +1,305 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 
 <head>
-
-	<meta charset="utf-8">
-
-	<title>The Gasp - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
-	<meta name="description" content="The Gasp est un jeu de cartes gratuit en pour jouer en solitaire sur PC. A l'origine développé en Basic, puis en Qbasic, il est maintenant disponible dans une version en JavaScript.">
-
-	<!-- style perso et Bootstrap -->
 	
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bootstrap.perso.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet"> 
-		
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <title>Le Gasp - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
+	<meta name="description" content="Le Gasp est un jeu de cartes gratuit en pour jouer en solitaire sur PC. A l'origine développé en Basic, puis en Qbasic, il est maintenant disponible dans une version en JavaScript.">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- style perso et Bootstrap -->
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.perso.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
+
 	<!-- vérifs de Google -->
 
 	<meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />
-		
+
 </head>
-
+  
 <body>
-	
-<div class="container-fluid"  style="background-color: #f8f9fa;">
+  
+<div class="container-fluid bg-light">
 
-	<div class="container">
+	<div class="container">   
 
-		<div class="row">
+	    <nav class="navbar navbar-expand-lg navbar-light">
+	   		<a class="navbar-brand" href="index.html">
+	   		<img src="images/icones/cards_01-512.png" alt="" class="d-inline-block align-top" id="icone"> 
+	        Le Gasp JS</a>        
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarText">
+	            <ul class="navbar-nav mr-auto">
+	                <li class="nav-item">
+	                    <a class="nav-item nav-link" href="index.html">A propos</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Nouvelle partie</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalOptions">Options</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
+	                </li>
+	            </ul>
+	            <span class="navbar-text">Version 0.11</span>
+	        </div>
+	    </nav>
 
-			<nav class="navbar navbar-expand-lg navbar-light bg-light col-12">
-				<a class="navbar-brand" href="#">The Gasp JS</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarText">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-item nav-link" href="index.html">A propos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Nouvelle partie</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalOptions">Options</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
-						</li>
-					</ul>
-				  <span class="navbar-text">Version 0.8.26</span>
-				</div>
-			  </nav>
-	
-		</div>
-
-	</div>	
-	
+    </div>
+    
 </div>
 
-<div class="container-fluid">
+<header class="container-fluid">
 
-		<div class="row" style="background-image:url('images/playing-cards.jpg');background-size: cover;clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);background-position: center;">
+	<div class="row" id="Plateau">
 
-			<div class="col-12 col-md-6 d-flex align-items-center justify-content-center"  style="background-color: rgba(0, 0, 0, 0.2);" id="titre">
-			<h2 style="color:white;font-family: 'Raleway', sans-serif;font-size:2.2em;" class="m-5">The Gasp JS</h2>
-			</div>
+		<div class="col-12 col-md-6 d-flex align-items-center justify-content-center" id="titre">
+		<h2 class="m-5">Le Gasp JS</h2>
+		</div>
+    
+		<div class="col-md-6 d-flex align-items-center justify-content-center" id="slogan">
+		<p class="text-right m-5 text-white">Saurez-vous toutes les retourner ?</p>
+		</div>
+    
+	</div>
 
-			<div class="col-md-6 d-flex align-items-center justify-content-center" id="slogan">
-			<p style="color: white;" class="text-right m-5">Saurez-vous toutes les retourner ?</p>
-			</div>
+</header>
 
-		</div>	
+<section class="container">		
 
-</div>		
-
-<div class="container bg-white">		
-
-	<article class="col-md-12">
-
-			<h4 class="mt-4">C'est quoi The Gasp JS ?</h4>
-
-			<p class="mt-4 text-justify">Il y a quelques mois, j'ai découvert un <a href="sources/jeux-et-strategie-38-p54.jpg" title="article sur Le Gasp paru dans la revue Jeux et Stratégie d'avril/mai 1985">article</a> et un <a href="sources/jeux-et-strategie-38-p78.jpg" title="listing en basic paru dans la revue Jeux et Stratégie d'avril/mai 1985 pour jouer à Le Gasp">listing en Basic</a> parus dans le n°38 de Jeux et Stratégie d'avril/mai 1985. Il s'agit d'un <strong>petit jeu de réflexion</strong> qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule règle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne.</p>
-			
-			<p class="text-justify">Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, aujourd'hui nous nous appellerions ça un jeu en "mode console". Dans ma version, <strong>jouable en ligne gratuitement</strong>, les pions ont été remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle.</p>
-
-			<p class="text-justify">Selon la revue que j'ai citée plus haut, il existe des solutions en 6, 8 et 10 coups !</p>
-
+	<article class="col-md-12 bg-white">
+    
+		<h4 class="mt-4">C'est quoi Le Gasp JS ?</h4>
+    
+			<p class="mt-4 text-justify">Il y a quelques mois, j'ai découvert un <a href="le-gasp.html" title="article sur Le Gasp paru dans la revue Jeux et Stratégie d'avril/mai 1985">article</a> et un <a href="code-basic.html" title="listing en basic paru dans la revue Jeux et Stratégie d'avril/mai 1985 pour jouer à Le Gasp">listing en Basic</a> parus dans le n°38 de Jeux &amp; Stratégie d'avril/mai 1985. Il s'agit d'un <strong>petit jeu de réflexion</strong> qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule règle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne. Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, il s'agissait d'un jeu en "mode texte" que nous appellerions aujourd'hui un jeu en "mode console". Dans ma version, <strong>jouable en ligne gratuitement</strong>, les pions ont été remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle.</p>
+    
+			<p class="text-justify mb-5">Selon la revue que j'ai citée plus haut, il existe des solutions en 6, 8 et 10 coups !</p>
+    
 			<div class="row">
-
+    
 				<div class="col-3">	
-					<a href="#" data-toggle="modal" data-target="#modalecapture01" title="Capture d'écran du jeu de carte solitaire sur navigateur The Gasp">
-					<img src="images/captures/thumbs/thegasp01.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur The Gasp"></a>
+					<a href="#" data-toggle="modal" data-target="#modalecapture01" title="Capture d'écran du jeu de carte solitaire sur navigateur Le Gasp">
+					<img src="images/captures/thumbs/thegasp01.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur Le Gasp"></a>
 				</div>
 				<div class="col-3">	
-					<a href="#" data-toggle="modal" data-target="#modalecapture02" title="Capture d'écran du jeu de carte solitaire sur navigateur The Gasp">
-					<img src="images/captures/thumbs/thegasp02.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur The Gasp"></a>
+					<a href="#" data-toggle="modal" data-target="#modalecapture02" title="Capture d'écran du jeu de carte solitaire sur navigateur Le Gasp">
+					<img src="images/captures/thumbs/thegasp02.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur Le Gasp"></a>
 				</div>
 				<div class="col-3">	
-					<a href="#" data-toggle="modal" data-target="#modalecapture03" title="Capture d'écran du jeu de carte solitaire sur navigateur The Gasp">
-					<img src="images/captures/thumbs/thegasp03.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur The Gasp"></a>
+					<a href="#" data-toggle="modal" data-target="#modalecapture03" title="Capture d'écran du jeu de carte solitaire sur navigateur Le Gasp">
+					<img src="images/captures/thumbs/thegasp03.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur Le Gasp"></a>
 				</div>
 				<div class="col-3">	
-					<a href="#" data-toggle="modal" data-target="#modalecapture04" title="Capture d'écran du jeu de carte solitaire sur navigateur The Gasp">
-					<img src="images/captures/thumbs/thegasp04.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur The Gasp"></a>
+					<a href="#" data-toggle="modal" data-target="#modalecapture04" title="Capture d'écran du jeu de carte solitaire sur navigateur Le Gasp">
+					<img src="images/captures/thumbs/thegasp04.jpg" class="img-thumbnail mb-3" alt="Capture d'écran du jeu de carte gratuit sur navigateur Le Gasp"></a>
 				</div>
-
+    
 			</div>
-			
-			<p class="text-center mt-4">Saurez-vous toutes les retourner ?<br />
-				<a href="jeu.html" title="Lancer une partie gratuite de The Gasp JS">Lancer une partie de The Gasp JS</a><br />
-				<small>(Optimisé pour une résolution 1920 x 1080)</small></p>
-
-			<p class="text-center mt-4">Si vous êtes curieux, le code source est disponible sur GitHub :<br />
-				<a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu The Gasp en JavaScript sur GitHub">
-				https://github.com/AlexisAmand/The-Gasp-JS</a></p>
-			
-		</article>
-			
+                
+            <p class="text-center mt-4">Saurez-vous toutes les retourner ?<br />
+            <a href="jeu.html" title="Lancer une partie gratuite de Le Gasp JS">Lancer une partie de Le Gasp JS</a></p>
+    
+            <p class="text-center mt-4">Si vous êtes curieux, le code source est disponible sur GitHub :<br />
+            <a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu Le Gasp en JavaScript sur GitHub">
+            https://github.com/AlexisAmand/The-Gasp-JS</a></p>
+                
+	</article>
+                
 	<footer class="row  mt-5">
 		<div class="col-12 text-center mt-5">
-			<p>Jeu réalisé par <a href="http://www.boitasite.com" title="Alexis Amand - Developpeur à Valenciennes"><u>Alexis AMAND</u></a> - Découvrez aussi la <a href="http://www.boitasite.com/thegasp.php" title="A propos de la version du jeu The Gasp disponible en VB.Net"><u>version VB.net</u></a></p>
+		<p>Jeu adapté par <a href="http://twitter.com/alexisamand" target="_blank" title="Alexis Amand - Développeur à Valenciennes">Alexis AMAND</a> d'après Francis Piault et Michel Brassinne</p>
 		</div>
 	</footer>
-
-	<!-- Fenêtre modale pour les options -->
-
-	<div class="modal fade" id="ModalOptions" tabindex="-1" role="dialog" aria-labelledby="ModalOptionsLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered " role="document">
-			<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="ModalOptionsLabel">Options</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-
-			<form name="formoptions">
-			
-				<div class="modal-body text-justify">
-
-				<p>Choisissez un dos pour vos cartes, puis cliquez sur 'Ok' pour valider votre choix. Ce changement n'a aucune répercution sur la partie en cours.</p>
-	
-				<p><strong>Dos de la carte</strong></p>
-
-				<img src="images/backs/back.png" id="1" onclick="mark(this)" class="cartes">	
-				<img src="images/backs/red.png" id="2" onclick="mark(this)" class="cartes">
-				<img src="images/backs/old.png" id="3" onclick="mark(this)" class="cartes">
-				<img src="images/backs/russian.png" id="4" onclick="mark(this)" class="cartes">
-				<img src="images/backs/red2.png" id="5" onclick="mark(this)" class="cartes">
-				<img src="images/backs/suisse.png" id="6" onclick="mark(this)" class="cartes">
-
-				</div>
-
-				<div class="modal-footer">
-						
-				<button type="button" class="btn btn-primary" onclick="	$('#ModalOptions').modal('hide');">Fermer</button>
-				
-				</div>
-
-			</form>
-
-			</div>
-		</div>
-	</div>
-	
-	<!-- Fenêtre modale pour la nouvelle partie -->
-	
-	<div class="modal fade" id="ModalNouvellePartie" tabindex="-1" role="dialog" aria-labelledby="ModalNouvellePartieLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered " role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-			<h5 class="modal-title" id="ModalNouvellePartieLabel">Nouvelle partie</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			</div>
-			<div class="modal-body text-justify">
-			Etes-vous certain(e) de vouloir commencer une nouvelle partie ?
-			</div>
-			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
-			<button type="button" class="btn btn-primary" onclick="NouvellePartie()">Oui</button>
-			</div>
-		</div>
-		</div>
-	</div>
-	
-	<!-- Fenêtre modale pour la fenêtre apropos -->
-	
-	<div class="modal fade" id="ModalApropos" tabindex="-1" role="dialog" aria-labelledby="ModalAproposLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-			<h5 class="modal-title" id="ModalAproposLabel">Règles du jeu</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			</div>
-			<div class="modal-body text-justify">
-
-			<p>Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 cartes formant un carré 4 x 4. Le but est de toutes les retourner en respectant une seule règle : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
-
-			<p>Il existe des solutions en 6, 8 ou 10 coups.</p>
-			
-			</div>
-			<div class="modal-footer text-center">
-			<button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
-			</div>
-		</div>
-		</div>
-	</div>
-	
-	<!-- Modale capture 01 -->
-	<div class="modal fade" id="modalecapture01" tabindex="-1" role="dialog" aria-labelledby="modalecapture01Label" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-12">	
-						<img src="images/captures/thegasp01.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript" style="width: 100%;">
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-			</div>
-		</div>
-		</div>
-	</div>
-
-	<!-- Modale capture 02 -->
-	<div class="modal fade" id="modalecapture02" tabindex="-1" role="dialog" aria-labelledby="modalecapture02Label" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-12">	
-						<img src="images/captures/thegasp02.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript" style="width: 100%;">
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-			</div>
-		</div>
-		</div>
-	</div>
-
-	<!-- Modale capture 03 -->
-	<div class="modal fade" id="modalecapture03" tabindex="-1" role="dialog" aria-labelledby="modalecapture03Label" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-12">	
-						<img src="images/captures/thegasp03.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript" style="width: 100%;">
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-			</div>
-		</div>
-		</div>
-	</div>
-
-	<!-- Modale capture 04 -->
-	<div class="modal fade" id="modalecapture04" tabindex="-1" role="dialog" aria-labelledby="modalecapture04Label" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-12">	
-						<img src="images/captures/thegasp04.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript" style="width: 100%;">
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-			</div>
-		</div>
-		</div>
-	</div>
-	
-</div>
+    
+        <!-- Fenêtre modale pour les options -->
+    
+        <div class="modal fade" id="ModalOptions" tabindex="-1" role="dialog" aria-labelledby="ModalOptionsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalOptionsLabel">Options</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+    
+                <form name="formoptions">
+                
+                    <div class="modal-body text-justify">
+    
+                    <p>Choisissez un dos pour vos cartes, puis cliquez sur 'Ok' pour valider votre choix. Ce changement n'a aucune répercution sur la partie en cours.</p>
+        
+                    <p><strong>Dos de la carte</strong></p>
+    
+                    <img src="images/backs/back.png" id="1" onclick="mark(this)" class="cartes">	
+                    <img src="images/backs/red.png" id="2" onclick="mark(this)" class="cartes">
+                    <img src="images/backs/old.png" id="3" onclick="mark(this)" class="cartes">
+                    <img src="images/backs/russian.png" id="4" onclick="mark(this)" class="cartes">
+                    <img src="images/backs/red2.png" id="5" onclick="mark(this)" class="cartes">
+                    <img src="images/backs/suisse.png" id="6" onclick="mark(this)" class="cartes">
+    
+                    </div>
+    
+                    <div class="modal-footer">
+                            
+                    <button type="button" class="btn btn-primary" onclick="	$('#ModalOptions').modal('hide');">Fermer</button>
+                    
+                    </div>
+    
+                </form>
+    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fenêtre modale pour la nouvelle partie -->
+        
+        <div class="modal fade" id="ModalNouvellePartie" tabindex="-1" role="dialog" aria-labelledby="ModalNouvellePartieLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="ModalNouvellePartieLabel">Nouvelle partie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body text-justify">
+                Etes-vous certain(e) de vouloir commencer une nouvelle partie ?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+                <button type="button" class="btn btn-primary" onclick="NouvellePartie()">Oui</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Fenêtre modale pour la fenêtre apropos -->
+        
+        <div class="modal fade" id="ModalApropos" tabindex="-1" role="dialog" aria-labelledby="ModalAproposLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="ModalAproposLabel">Règles du jeu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body text-justify">
+    
+                <p>Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 cartes formant un carré 4 x 4. Le but est de toutes les retourner en respectant une seule règle : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
+    
+                <p>Il existe des solutions en 6, 8 ou 10 coups.</p>
+                
+                </div>
+                <div class="modal-footer text-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Modale capture 01 -->
+        
+        <div class="modal fade" id="modalecapture01" tabindex="-1" role="dialog" aria-labelledby="modalecapture01Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            	<div class="modal-header">
+			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        <span aria-hidden="true">&times;</span>
+			        </button>
+			    </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">	
+                            <img src="images/captures/thegasp01.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Modale capture 02 -->
+        
+        <div class="modal fade" id="modalecapture02" tabindex="-1" role="dialog" aria-labelledby="modalecapture02Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               	<div class="modal-header">
+			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        <span aria-hidden="true">&times;</span>
+			        </button>
+			    </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">	
+                            <img src="images/captures/thegasp02.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Modale capture 03 -->
+        
+        <div class="modal fade" id="modalecapture03" tabindex="-1" role="dialog" aria-labelledby="modalecapture03Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            	<div class="modal-header">
+			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        <span aria-hidden="true">&times;</span>
+			        </button>
+			    </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">	
+                            <img src="images/captures/thegasp03.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Modale capture 04 -->
+        
+        <div class="modal fade" id="modalecapture04" tabindex="-1" role="dialog" aria-labelledby="modalecapture04Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+           		<div class="modal-header">
+			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        <span aria-hidden="true">&times;</span>
+			        </button>
+			    </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">	
+                            <img src="images/captures/thegasp04.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+</section>
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/thegasp.js"></script>
-
+      
 <!-- Matomo -->
 <script type="text/javascript">
   var _paq = _paq || [];
@@ -305,6 +315,7 @@
   })();
 </script>
 <!-- End Matomo Code -->
-
+    
 </body>
+
 </html>

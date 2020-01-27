@@ -1,2 +1,3 @@
--> la rubrique "a propos" peut surement devenir "Règles"
--> tailles images en Mo - voir avec photoshop
+version 0.8.26
+
+version 0.11

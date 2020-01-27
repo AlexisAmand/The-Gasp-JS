@@ -92,6 +92,14 @@ function VerificationGrille()
 	
 function retourne(xc, yc)
 	{
+	
+	/* test jouer un son */
+	
+	var audio = new Audio('sounds/9388.mp3');
+	audio.play();
+	
+	/* ----------------- */
+	
 	nbCoups = nbCoups + 1;
 	document.Info.coups.value = nbCoups	
 		for (var y = yc - 1; y < yc + 2; y++)
