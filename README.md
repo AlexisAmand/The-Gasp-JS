@@ -25,4 +25,4 @@ A découvrir sur : http://thegasp.genealexis.fr
 
 ![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp04.jpg)
 
-![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp05jpg)
+![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp05.jpg)
