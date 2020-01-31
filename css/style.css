@@ -14,7 +14,8 @@ small
 	background-image:url('../images/card-1868267_1920.jpg');
 	background-size: cover;
 	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-	background-position: center;"
+	background-position: center;
+	background-attachment: fixed;
 	}
 
 #icone
