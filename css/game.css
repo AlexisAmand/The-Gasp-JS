@@ -1,59 +1,32 @@
-body 
-	{
-	/* background-image:url('../images/fonds/fond01.jpg'); */
-	}
-	
-#BigPage
-	{
+#BigPage {
 	background-color: #8dbbe9;
 	min-height: calc(100vh - 89px);
 	background-image:url('../images/card-1868267_1920.jpg');
 	background-size: cover;
-	}
+}
 	
-#icone
-	{
+#icone {
 	width:30px;
 	height:30px;
-	}
+}
 	
-img 
-	{
+img {
 	width:100%;
 	max-width: 115px;
-	}
+}
 	
-.H 
-	{
+.H {
 	display:none;
-	}
+}
 
-.col-3
-	{
+.col-3 {
 	text-align:center;
-	}
+}
 
-.card
-	{
-	/* width: 18rem; */	
-	}	
-	
-#ModalOptions .cartes
-	{
+#ModalOptions .cartes {
 	width: 70px;
-	}
+}
 	
-#ModalOptions .fonds
-	{
-	/* width: 140px; */
-	}
-
-small
-	{	
-	/* font-size: 68%; */
-	}
-	
-footer
-	{
+footer {
 	background-color: #f8f9fa;
-	}
+}
