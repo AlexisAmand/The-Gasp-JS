@@ -53,7 +53,7 @@
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text">Version 0.11.42</span>
+	            <span class="navbar-text">Version 0.11.46</span>
 	        </div>
 	    </nav>
 
@@ -111,7 +111,7 @@
             <p class="text-center mt-4">Saurez-vous toutes les retourner ?<br />
             <a href="jeu.html" title="Lancer une partie gratuite de Le Gasp JS">Lancer une partie de Le Gasp JS</a></p>
     
-            <p class="text-center mt-4">Si vous êtes curieux, le code source est disponible sur GitHub :<br />
+            <p class="text-center mt-4">Si vous êtes curieux, le code source de la version JS est disponible sur GitHub :<br />
             <a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu Le Gasp en JavaScript sur GitHub">
             https://github.com/AlexisAmand/The-Gasp-JS</a></p>
             
@@ -156,9 +156,9 @@
                     </div>
     
                     <div class="modal-footer">
-                            
-                    <button type="button" class="btn btn-primary" onclick="	$('#ModalOptions').modal('hide');">Ok</button>
-                    
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary" onclick="	$('#ModalOptions').modal('hide');">Ok</button>
+                        </div>
                     </div>
     
                 </form>
@@ -182,8 +182,10 @@
                 Etes-vous certain(e) de vouloir commencer une nouvelle partie ?
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
-                <button type="button" class="btn btn-primary" onclick="NouvellePartie()">Oui</button>
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+                        <button type="button" class="btn btn-primary" onclick="NouvellePartie()">Oui</button>
+                    </div>
                 </div>
             </div>
             </div>
@@ -208,7 +210,9 @@
                 
                 </div>
                 <div class="modal-footer text-center">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+                    </div>
                 </div>
             </div>
             </div>
