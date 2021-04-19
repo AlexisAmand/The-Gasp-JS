@@ -23,6 +23,56 @@
 
 	<meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />
 
+    <!-- code pour le RGPD -->
+
+    <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
+
+        <script type="text/javascript">
+        tarteaucitron.init({
+    	  "privacyUrl": "", /* Privacy policy url */
+
+    	  "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+    	  "cookieName": "tarteaucitron", /* Cookie name */
+    
+    	  "orientation": "middle", /* Banner position (top - bottom) */
+       
+          "groupServices": false, /* Group services by category */
+                           
+    	  "showAlertSmall": false, /* Show the small banner on bottom right */
+    	  "cookieslist": false, /* Show the cookie list */
+                           
+          "closePopup": false, /* Show a close X on the banner */
+
+          "showIcon": true, /* Show cookie icon to manage cookies */
+          //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
+          "iconPosition": "BottomRight", /* BottomRight, BottomLeft, TopRight and TopLeft */
+
+    	  "adblocker": false, /* Show a Warning if an adblocker is detected */
+                           
+          "DenyAllCta" : true, /* Show the deny all button */
+          "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+          "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
+                           
+    	  "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+    	  "removeCredit": false, /* Remove credit link */
+    	  "moreInfoLink": true, /* Show more info link */
+
+          "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+          "useExternalJs": false, /* If false, the tarteaucitron.js file will be loaded */
+
+    	  //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+                          
+          "readmoreLink": "", /* Change the default readmore link */
+
+          "mandatory": true, /* Show a message about mandatory cookies */
+        });
+        </script>
+
+        <!-- Matomo via Tarte au citron -->
+
+        <script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
+
 </head>
   
 <body>
@@ -53,7 +103,7 @@
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text">Version 0.11.55</span>
+	            <span class="navbar-text">Version 0.11.97</span>
 	        </div>
 	    </nav>
 
@@ -204,27 +254,13 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/thegasp.js"></script>
+
+<!-- code Matomo pour Tarte au citron -->
       
-<!-- Matomo -->
 <script type="text/javascript">
-  var _paq = _paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//genealexis.fr/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '13']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
+tarteaucitron.user.matomoId = 13;
+(tarteaucitron.job = tarteaucitron.job || []).push('matomo');
 </script>
-<!-- End Matomo Code -->
-    
-<!-- Matomo Image Tracker-->
-<img src="http://genealexis.fr/piwik/piwik.php?idsite=13&amp;rec=1" style="border:0" alt="" />
-<!-- End Matomo -->
 
 </body>
-
 </html>
