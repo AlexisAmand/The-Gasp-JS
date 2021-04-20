@@ -82,7 +82,7 @@
 	<div class="container">   
 
 	    <nav class="navbar navbar-expand-lg navbar-light">
-	   		<a class="navbar-brand" href="index.html">
+	   		<a class="navbar-brand" href="index.php">
 	   		<img src="images/icones/cards_01-512.png" alt="" class="d-inline-block align-top" id="icone"> 
 	        Le Gasp JS</a>        
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +91,7 @@
 	        <div class="collapse navbar-collapse" id="navbarText">
 	            <ul class="navbar-nav mr-auto">
 	                <li class="nav-item">
-	                    <a class="nav-item nav-link" href="index.html">A propos</a>
+	                    <a class="nav-item nav-link" href="index.php">A propos</a>
 	                </li>
 	                <li class="nav-item">
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Nouvelle partie</a>
@@ -103,7 +103,7 @@
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text">Version 0.11.97</span>
+	            <span class="navbar-text">Version 0.11.115</span>
 	        </div>
 	    </nav>
 
@@ -133,11 +133,11 @@
     
 		<h4 class="mt-4">Qu'est-ce que "Le Gasp JS" ?</h4>
     
-			<p class="mt-4 text-justify">Il y a quelques mois, j'ai découvert un <a href="le-gasp.html" title="article sur Le Gasp paru dans la revue Jeux et Stratégie d'avril/mai 1985">article</a> et un <a href="code-basic.html" title="listing en basic paru dans la revue Jeux et Stratégie d'avril/mai 1985 pour jouer à Le Gasp">listing en Basic</a> parus dans le n°38 de Jeux &amp; Stratégie d'avril/mai 1985. Il s'agit d'un <strong>petit jeu de réflexion</strong> qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule règle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne. Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, il s'agissait d'un jeu en "mode texte" que nous appellerions aujourd'hui un jeu en "mode console". Dans ma version, <strong>jouable en ligne gratuitement</strong> et <strong>sans installer d'application</strong>, les pions ont été remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle.</p>
+			<p class="mt-4 text-justify">Il y a quelques mois, j'ai découvert un <a href="le-gasp.php" title="article sur Le Gasp paru dans la revue Jeux et Stratégie d'avril/mai 1985">article</a> et un <a href="code-basic.php" title="listing en basic paru dans la revue Jeux et Stratégie d'avril/mai 1985 pour jouer à Le Gasp">listing en Basic</a> parus dans le n°38 de Jeux &amp; Stratégie d'avril/mai 1985. Il s'agit d'un <strong>petit jeu de réflexion</strong> qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 pions bicolores formant un carré 4 x 4. Le but est de retourner tous les pions en respectant une seule règle : Quand vous désignez un pion, ses 8 voisins changent de couleurs mais lui garde la sienne. Quelques pages plus tard, la revue adaptait le jeu de plateau en Basic. Rien de bien génial, il s'agissait d'un jeu en "mode texte" que nous appellerions aujourd'hui un jeu en "mode console". Dans ma version, <strong>jouable en ligne gratuitement</strong> et <strong>sans installer d'application</strong>, les pions ont été remplacés par des cartes, mais le principe est toujours le même : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle.</p>
     
 			<p class="text-justify">Selon la revue que j'ai citée plus haut, il existe des solutions en 6, 8 et 10 coups !</p>
 
-            <button class="nav-item nav-link btn btn-primary mx-auto mb-5" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Commencer une partie !</button>
+            <button class="nav-item nav-link btn btn-primary mx-auto my-5" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Commencer une partie !</button>
 
     
 			<div class="row">
@@ -162,7 +162,7 @@
 			</div>
                 
             <p class="text-center mt-4">Saurez-vous toutes les retourner ?<br />
-            <a href="jeu.html" title="Lancer une partie gratuite de Le Gasp JS">Lancer une partie de Le Gasp JS</a></p>
+            <a href="jeu.php" title="Lancer une partie gratuite de Le Gasp JS">Lancer une partie de Le Gasp JS</a></p>
     
             <p class="text-center mt-4">Si vous êtes curieux, le code source de la version JS est disponible sur GitHub :<br />
             <a href="https://github.com/AlexisAmand/The-Gasp-JS" title="code source du jeu Le Gasp en JavaScript sur GitHub">

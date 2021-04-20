@@ -80,7 +80,7 @@
         <div class="container">
 
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="index.php">
 	   			<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top" id="icone"> 
 	        	Le Gasp JS</a>  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,7 +89,7 @@
 				<div class="collapse navbar-collapse" id="navbarText">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-item nav-link" href="index.html">A propos</a>
+							<a class="nav-item nav-link" href="index.php">A propos</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Nouvelle partie</a>
@@ -101,7 +101,7 @@
 							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
 						</li>
                     </ul>
-                    <span class="navbar-text">Version 0.11.97</span>
+                    <span class="navbar-text">Version 0.11.115</span>
             	</div>
 			</nav>                
         

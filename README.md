@@ -2,7 +2,7 @@
 
 Il s'agit d'un jeu développé en JavaScript, d'après un article sur le basic paru dans Jeux & Stratégie n°38 (Avril/Mai 1986).
 
-http://thegasp.genealexis.fr/code-basic.html
+http://thegasp.genealexis.fr/code-basic.php
 
 Ce jeu est jouable en ligne gratuitement via un navigateur web.
 

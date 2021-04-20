@@ -1,0 +1,6 @@
+TODO LIST
+---------
+
+- mettre les textes dans des fichiers langues
+- mettre une option qui permet de couper le son du jeu
+- créer une version anglaise

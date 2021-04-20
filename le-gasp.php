@@ -6,8 +6,8 @@
 	<!-- Required meta tags -->
     <meta charset="utf-8">
     
-    <title>Programmer Le Gasp en Basic - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
-	<meta name="description" content="Essais d'adaptation du jeu en Basic 'Le Gasp' en Qbasic, VB.net et enfin en Javascript">
+    <title>Histoire du jeu Le Gasp - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
+	<meta name="description" content="Histoire du jeu Le Gasp qui a pour origine un article paru dans la revue Jeux & Stratégie en 1985">
       
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -82,8 +82,8 @@
 	<div class="container">   
 
 	    <nav class="navbar navbar-expand-lg navbar-light">
-	        <a class="navbar-brand" href="index.html">
-	   		<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top" id="icone"> 
+	        <a class="navbar-brand" href="index.php">
+	   		<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top" id="icone">
 	        Le Gasp JS</a>  
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
@@ -91,7 +91,7 @@
 	        <div class="collapse navbar-collapse" id="navbarText">
 	            <ul class="navbar-nav mr-auto">
 	                <li class="nav-item">
-	                    <a class="nav-item nav-link" href="index.html">A propos</a>
+	                    <a class="nav-item nav-link" href="index.php">A propos</a>
 	                </li>
 	                <li class="nav-item">
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Nouvelle partie</a>
@@ -103,7 +103,7 @@
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text">Version 0.11.97</span>
+	            <span class="navbar-text">Version 0.11.115</span>
 	        </div>
 	    </nav>
 
@@ -130,77 +130,23 @@
 <section class="container">		
 
 	<article class="col-md-12 bg-white">
-	
-		<h4 class="mt-4">Le Gasp (version basic)</h4>
-								
-			<figure class="text-center mt-4">
-	          <img src="images/presse/JS-38-page-78.jpg" class="figure-img img-fluid" alt="Capture d'écran de la version du GASP développée en QBasic">
+    
+		<h4 class="mt-4">Le Gasp</h4>
+		
+		<p>Note: Dans l'article ci-dessous, j'ai masqué la solution en dix coups pour la grille 4 x 4.</p>	
+		    
+    		<figure class="text-center mt-4">
+	          <img src="images/presse/JS-38-page-54-1.jpg" class="figure-img img-fluid" alt="Article de presse sur Le Gasp paru dans Jeux et Stratégie n°38 en 1985">
 	          <figcaption class="figure-caption">(source: Jeux &amp; Stratégie n°38 - avril/mai 1985)</figcaption>
 	        </figure>
-   			  		
-   			<br />  		
-   			  			
-			<code>			
-			10 T = 5: REM TAILLE 4 x 4<br />
-			20 HOME : REM EFFACE ECRAN<br />
-			30 REM *---&lt;AFFICHAGE&gt;---*<br />
-			40 PRINT "...1.2.3.4"<br />
-			50 FOR Y = 2 TO T<br />
-			60 PRINT : PRINT : PRINT : PRINT Y - 1;<br />
-			70 FOR X = 2 TO T<br />
-			80 HTAB X * 2: VTAB Y * 2<br />
-			90 IF A(X,Y) = 1 THEN PRINT "X";<br />
-			100 IF A(X,Y) = 0 THEN PRINT "O";<br />
-			110 NEXT X: NEXT Y<br />
-			120 REM *---&lt;CHOIX.JOUEUR&gt;---*<br />
-			130 PRINT : PRINT : PRINT : PRINT "NC="NC: PRINT: PRINT<br />
-			140 INPUT "X=";X:INPUT "Y=";Y<br />
-			150 NC = NC + 1<br />
-			160 X = X + 1: Y = Y + 1<br />
-			170 FOR YT = Y - 1 TO Y + 1<br />
-			180 FOR XT = X - 1 TO X + 1<br />
-			190 IF XT = X AND YT = Y THEN 220<br />
-			200 IF A(XT,YT) = 1 THEN A(XT,YT) = 0: GOTO 220<br />
-			210 A(XT,YT) = 1<br />
-			220 NEXT XT,YT: GOTO 20<br />
-            </code>
-            			
-		<h4 class="mt-4">Le Gasp (QBasic)</h4>
-	
-            <p class="mt-4 text-justify">Quand j'ai redécouvert ce bout de code à la fin de l'année 2017, j'ai eu comme un coup de coeur. Pour le tester, je me suis tourné vers QBasic 64 dans sa version 1.1. A l'heure de nos machine ultra puissante, c'était, à mes yeux, la meilleure solution. Je sais que j'aurais sans soute pu utiliser un émulateur, mais où aurait été le fun ? Comme vous pouvez le constater, il s'agit d'un jeu 100% en mode texte, comme celui de 1985. Si le coeur vous en dit, j'ai mis quelques codes sources sur <a href="https://github.com/AlexisAmand/The-Gasp-JS" title="Télécharger la version du jeu 'Le Gasp' développée en Basic et en QBasic sur mon GitHub">mon GitHub</a>:</p>
-                
-            <ul>
-                <li>Le code source en QBasic et son executable (dossier sources puis Qbasic)</li>
-                <li>Le listing de l'époque, en Basic pour Apple I et II (dossier sources puis Basic).</li>
-            </ul>
-
-            <p class="mt-4 text-justify">Il existe un site qui permet d'executer du code écrit en Basic d'Apple : <a href="https://calormen.com/jsbasic/">https://calormen.com/jsbasic/</a>.</p>
-
-            <figure class="text-center mt-4">
-                <img src="images/captures/applesoft-basic.jpg" class="figure-img img-fluid" alt="Capture d'écran de la version en QBasic du jeu 'Le Gasp'">
-                <figcaption class="figure-caption">Le Jeu "Le Gasp" en Basic pour Apple I et II<br />(capture générée via https://calormen.com/jsbasic/)</figcaption>
-            </figure>
-
-            <figure class="text-center mt-4">
-                <img src="images/captures/capture-01.jpg" class="figure-img img-fluid" alt="Capture d'écran de la version en QBasic du jeu 'Le Gasp'">
-                <figcaption class="figure-caption">Le Jeu "Le Gasp" en Qbasic</figcaption>
-            </figure> 
-			
-		<h4 class="mt-4">Le Gasp (version VB.Net)</h4>
-	
-			<p class="mt-4 text-justify">La version Qbasic fonctionne sans trop se poser de question, mais il faut avouer qu'elle n'est pas très jolie. On pourrait imaginer des couleurs ou un message qui indique que le joueur à réussi. C'est ainsi qu'est née la version en VB.Net ! J'ai juste remplacé les pions par des cartes. Cette fois, le code source n'est pas à votre disposition, mais vous pouvez <a href="sources/VBnet/legasp-vbnet.zip" title="Télécharger la version du jeu 'Le Gasp' développée en VB.Net">télécharger l'executable</a> (il faut dézipper le fichier, puis executer le fichier setup.msi) pour essayer le jeu chez vous, tranquillement. Petit plus : Vous pouvez y choisir une grille 4 x 4 ou une grille 5 x 5 selon le niveau de difficulté que vous désirez.</p>
-                
-            <p class="text-center">
-            	<img src="images/captures/thumbs/thegasp-01.jpg" class="img-thumbnail m-3 rounded float-none" alt="Capture d'écran de la version développée en VB.Net du jeu 'Le Gasp'">  
-            	<img src="images/captures/thumbs/thegasp-03.jpg" class="img-thumbnail m-3 rounded float-none" alt="Capture d'écran de la version développée en VB.Net du jeu 'Le Gasp'">
-            </p>
-                        
-		<h4 class="mt-4">Le Gasp (version Javascript)</h4>
-		
-            <p class="mt-4 text-justify">Je sais qu'installer quelque chose sur son PC à l'heure actuelle est devenue compliqué. On ignore d'où vient le truc, on a peur des cookies, des traceurs, des virus, des malwares et de toutes les mauvaises épidémies qui trainent un peu partout sur le net. C'est pour cette raison que j'ai eu envie de créer cette version du Gasp qui est jouable en ligne gratuitement. Si j'ai bien calculé mon coup, le site est même "mobile friendly", ce qui veut dire qu'il va s'adapter en fonction du support que vous utilisez : tablette, ordinateur ou même téléphone. Vous pouvez jouer en <a href="jeu.html" title="Jouer une partie du jeu gratuit 'Le Gasp'">cliquant ici</a> et comme pour la version Basic, le code est dispo sur <a href="https://github.com/AlexisAmand/The-Gasp-JS" title="Voir le code source du jeu 'Le Gasp' sur GitHub">mon GitHub</a>.</p>
-                     
-           	<br />
-
+	        
+	        <figure class="text-center mt-4">
+	          <img src="images/presse/JS-38-page-54-2.jpg" class="figure-img img-fluid" alt="Article de presse sur Le Gasp paru dans Jeux et Stratégie n°38 en 1985">
+	          <figcaption class="figure-caption">(source: Jeux &amp; Stratégie n°38 - avril/mai 1985)</figcaption>
+	        </figure>
+	        
+	        <br />
+	        
 	</article>
                 
 	<footer class="row  mt-5">
@@ -293,108 +239,22 @@
                 <p>Il existe des solutions en 6, 8 ou 10 coups.</p>
                 
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer text-center">
                     <div class="col-md-12 text-center">
-                        <div class="col-md-12 text-center">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
-                        </div>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
                     </div>
                 </div>
             </div>
             </div>
         </div>
-        
-        <!-- Modale capture 01 -->
-        
-        <div class="modal fade" id="modalecapture01" tabindex="-1" role="dialog" aria-labelledby="modalecapture01Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            	<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp01.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Modale capture 02 -->
-        
-        <div class="modal fade" id="modalecapture02" tabindex="-1" role="dialog" aria-labelledby="modalecapture02Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               	<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp02.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Modale capture 03 -->
-        
-        <div class="modal fade" id="modalecapture03" tabindex="-1" role="dialog" aria-labelledby="modalecapture03Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            	<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp03.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Modale capture 04 -->
-        
-        <div class="modal fade" id="modalecapture04" tabindex="-1" role="dialog" aria-labelledby="modalecapture04Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-           		<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp04.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        
+                
 </section>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/thegasp.js"></script>
-      
+
 <!-- code Matomo pour Tarte au citron -->
       
 <script type="text/javascript">

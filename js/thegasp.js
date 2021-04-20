@@ -4,7 +4,7 @@
 
 function NouvellePartie()
 	{
-	document.location.href = 'jeu.html';	
+	document.location.href = 'jeu.php';	
 	nbCoups = 0;
 	document.Info.coups.value = nbCoups;
 	
