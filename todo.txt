@@ -1,6 +1,29 @@
 TODO LIST
 ---------
 
-- mettre les textes dans des fichiers langues
-- mettre une option qui permet de couper le son du jeu
+- mettre une option qui permet de couper le son du jeu -> comment garder l'infos ?
 - créer une version anglaise
+- commenter CSS / JS / PHP
+- Options : dans la modale, ça doit être des miniatures
+
+- pour les options, je peux peut-être changer les id="X" en id="Fond-X", ça devrait corriger le bug lié au cadre bleu sur le fond
+
+- fond random à chaque nouvelle partie ?
+
+- session pour garder en mémoire les parametres d'une partie
+
+AVANT MISE EN LIGNE 
+-------------------
+
+- lien dans htaccess
+
+APRES MISE EN LIGNE
+-------------------
+
+- sitemap
+- Google Search Console
+
+VERSIONS :
+----------
+
+- Tapis : + 0.1.0

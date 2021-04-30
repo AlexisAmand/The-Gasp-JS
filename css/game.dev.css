@@ -1,11 +1,11 @@
 #BigPage {
 	background-color: #8dbbe9;
 	min-height: calc(100vh - 89px);
-	background-image:url('../images/card-1868267_1920.jpg');
+	background-image:url('../images/fonds/fond-01.jpg');
 	background-size: cover;
 }
 	
-#icone {
+.icone {
 	width:30px;
 	height:30px;
 }

@@ -2,7 +2,6 @@
 include('include/fonctions.inc.php'); 
 include('langues/'.ChoixLangue().'.php');
 ?>
-
 <!doctype html>
 <html lang="fr">
 
@@ -11,8 +10,8 @@ include('langues/'.ChoixLangue().'.php');
 	<!-- Required meta tags -->
     <meta charset="utf-8">
     
-    <title>Le Gasp - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
-	<meta name="description" content="Le Gasp est un jeu de cartes gratuit via navigateur pour jouer en solitaire sur PC. A l'origine développé en Basic, puis en Qbasic, il est maintenant disponible dans une version en JavaScript.">
+    <title>Mentions Légales - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
+	<meta name="description" content=" ">
       
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -76,7 +75,7 @@ include('langues/'.ChoixLangue().'.php');
 
         <!-- Matomo via Tarte au citron -->
 
-		<script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
+        <script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
 
 </head>
   
@@ -86,9 +85,9 @@ include('langues/'.ChoixLangue().'.php');
 
 	<div class="container">   
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+	    <nav class="navbar navbar-expand-lg navbar-light">
 	        <a class="navbar-brand" href="index.php?langue=<?php echo ChoixLangue(); ?>">
-	   		<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top icone"> 
+	   		<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top" id="icone"> 
 	        <?php echo THE_GASP_TITLE; ?></a>  
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
@@ -135,39 +134,27 @@ include('langues/'.ChoixLangue().'.php');
 <section class="container">		
 
 	<article class="col-md-12 bg-white">
-    
-		<h4 class="mt-4"><?php echo IND_TITLE; ?></h4>
-    
-			<p class="mt-4 text-justify"><?php echo IND_TEXT_1; ?></p>
-    
-			<p class="text-justify"><?php echo IND_TEXT_2; ?></p>
+	
+		<h4 class="mt-4"><?php echo ML_TITLE; ?></h4>
 
-            <button class="nav-item nav-link btn btn-primary mx-auto my-5" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Commencer une partie !</button>
+        <h5 class="mt-4"><?php echo ML_EDITOR; ?></h5>
+            
+            <p><?php echo ML_BOITASITE; ?></p>
 
-    
-			<div class="row">
-
-			<?php
-
-			/* Les 4 miniatures */
-
-			for ($i=1;$i<5;$i++)
-				{
-				echo '<div class="col-3">	
-				<a href="#" data-toggle="modal" data-target="#modalecapture0'.$i.'" title="Capture d\'écran du jeu de carte solitaire sur navigateur Le Gasp">
-				<img src="images/captures/thumbs/le-gasp-0'.$i.'.jpg" class="img-thumbnail mb-3" alt="Capture d\'écran du jeu de carte gratuit sur navigateur Le Gasp"></a>
-				</div>';
-				}
-
-			?>
-        
-			</div>
+        <h5 class="mt-4"><?php echo ML_CREATOR; ?></h5>
                 
-            <p class="text-center mt-4"><?php echo HEADER_SL; ?><br />
-            <a href="jeu.php?langue=<?php echo ChoixLangue(); ?>" title="Lancer une partie gratuite de Le Gasp JS"><?php echo IND_START_GAME; ?></a></p>
-    
-            <p class="text-center mt-4 mb-2"><?php echo IND_GITHUB; ?></p>
-            	
+            <p><?php echo ML_BOITASITE; ?></p>
+
+        <h5 class="mt-4"><?php echo ML_HBGT; ?></h5>
+            
+            <p><?php echo ML_HBGT_ADRESS ?></p>
+
+        <h5 class="mt-4"><?php echo ML_INFOS; ?></h5>
+
+            <p><?php echo ML_CNIL; ?></p>
+
+            <p><?php echo ML_COOKIES; ?></p>
+
 	</article>
                 
 	<footer class="row  mt-5">
@@ -175,20 +162,11 @@ include('langues/'.ChoixLangue().'.php');
 		<?php footer(); ?>
 		</div>
 	</footer>
-
-    <?php 
-
-	/* Les 7 fenêtres modales nécessaires sur la page */
-
-    include('include/options.inc.php');
-    include('include/nouvellepartie.inc.php'); 
-    include('include/apropos.inc.php');
 	
-	for($i=1; $i<5;$i++)
-		{
-		ModaleImage($i, "capture d\'écran d\'une partie du jeu Le Gasp en JavaScript");
-		}
-
+    <?php 
+    include('include/options.inc.php'); 
+    include('include/nouvellepartie.inc.php');
+    include('include/apropos.inc.php'); 
     ?>
 
 </section>

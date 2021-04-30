@@ -1,3 +1,8 @@
+<?php 
+include('include/fonctions.inc.php'); 
+include('langues/'.ChoixLangue().'.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -80,30 +85,30 @@
         <div class="container">
 
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="index.php">
-	   			<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top" id="icone"> 
-	        	Le Gasp JS</a>  
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+				<a class="navbar-brand" href="index.php?langue=<?php echo ChoixLangue(); ?>">
+				<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top icone"> 
+				<?php echo THE_GASP_TITLE; ?></a>  
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
 				<div class="collapse navbar-collapse" id="navbarText">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-item nav-link" href="index.php">A propos</a>
+							<a class="nav-item nav-link" href="index.php?langue=<?php echo ChoixLangue(); ?>"><?php echo NAV_BAR_AB; ?></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Nouvelle partie</a>
+							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie"><?php echo NAV_BAR_NG; ?></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalOptions">Options</a>
+							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalOptions"><?php echo NAV_BAR_OPT; ?></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos">Règles</a>
+							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos"><?php echo NAV_BAR_RL; ?></a>
 						</li>
-                    </ul>
-                    <span class="navbar-text">Version 0.11.115</span>
-            	</div>
-			</nav>                
+					</ul>
+					<span class="navbar-text"><?php version()."<a href='?langue=fr'>".Drapeau(); ?></a></span>
+				</div>
+			</nav>               
         
 		</div>
 
@@ -244,10 +249,10 @@
 			</div>
 
     </section>
-    
-</div> <!-- Div qui contient le calc -->
 
-<footer class="container-fluid">
+	</div> <!-- Div qui contient le calc -->
+    
+<footer class="container-fluid fixed-bottom">
 
     <div class="container">
 
@@ -257,7 +262,7 @@
 
             <form name="Info">
                 <div class="form-group">
-                    <label for="Score" class="col-form-label">Nombre de coups</label>
+                    <label for="Score" class="col-form-label"><?php echo GAME_SCORE; ?></label>
                     <input type="text" name="coups" class="form-control">
                 </div>
             </form>
@@ -270,119 +275,14 @@
 
 </footer>
 
-        <!-- Fenêtre modale pour les options -->
-    
-        <div class="modal fade" id="ModalOptions" tabindex="-1" role="dialog" aria-labelledby="ModalOptionsLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered " role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ModalOptionsLabel">Options</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-    
-                <form name="formoptions">
-                
-                    <div class="modal-body text-justify">
-    
-                    <p>Choisissez un dos pour vos cartes, puis cliquez sur 'Ok' pour valider votre choix. Ce changement n'a aucune répercution sur la partie en cours.</p>
-        
-                    <p><strong>Dos de la carte</strong></p>
-    
-                    <img src="images/backs/back.png" id="1" onclick="mark(this)" class="cartes">	
-                    <img src="images/backs/red.png" id="2" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/old.png" id="3" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/russian.png" id="4" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/red2.png" id="5" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/suisse.png" id="6" onclick="mark(this)" class="cartes">
-    
-                    </div>
-    
-                    <div class="modal-footer">
-                        <div class="col-md-12 text-center">
-                        	<button type="button" class="btn btn-primary" onclick="	$('#ModalOptions').modal('hide');">Ok</button>
-                        </div>
-                    </div>
-                </form>
-    
-                </div>
-            </div>
-        </div>
-        
-        <!-- Fenêtre modale pour la nouvelle partie -->
-        
-        <div class="modal fade" id="ModalNouvellePartie" tabindex="-1" role="dialog" aria-labelledby="ModalNouvellePartieLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="ModalNouvellePartieLabel">Nouvelle partie</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body text-justify">
-                Etes-vous certain(e) de vouloir commencer une nouvelle partie ?
-                </div>
-                <div class="modal-footer">
-					<div class="col-md-12 text-center">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
-						<button type="button" class="btn btn-primary" onclick="NouvellePartie()">Oui</button>
-					</div>
-                </div>
-            </div>
-            </div>
-        </div>
-        
-        <!-- Fenêtre modale pour la fenêtre apropos -->
-        
-        <div class="modal fade" id="ModalApropos" tabindex="-1" role="dialog" aria-labelledby="ModalAproposLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="ModalAproposLabel">Règles du jeu</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body text-justify">
-    
-                <p>Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 cartes formant un carré 4 x 4. Le but est de toutes les retourner en respectant une seule règle : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p>
-    
-                <p>Il existe des solutions en 6, 8 ou 10 coups.</p>
-                
-                </div>
-                <div class="modal-footer">
-					<div class="col-md-12 text-center">
-                		<button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
-					</div>
-                </div>
-            </div>
-            </div>
-		</div>
-		
-		<!-- Fenêtre modale si la personne a gagné ! -->
-		
-		<div class="modal fade" id="ModalBravo" tabindex="-1" role="dialog" aria-labelledby="ModalBravoLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-				<h5 class="modal-title" id="ModalBravoLabel">Bravo !</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				</div>
-				<div class="modal-body text-justify">
-				
-				</div>
-				<div class="modal-footer">
-					<div class="col-md-12 text-center">
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
+
+
+<?php 
+include('include/options.inc.php');  
+include('include/nouvellepartie.inc.php'); 
+include('include/apropos.inc.php');
+include('include/gagne.inc.php');
+?>
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

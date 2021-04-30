@@ -1,5 +1,7 @@
-<?php include('langues/fr.php'); ?>
-
+<?php 
+include('include/fonctions.inc.php'); 
+include('langues/'.ChoixLangue().'.php');
+?>
 <!doctype html>
 <html lang="fr">
 
@@ -84,7 +86,7 @@
 	<div class="container">   
 
 	    <nav class="navbar navbar-expand-lg navbar-light">
-	        <a class="navbar-brand" href="index.php">
+	        <a class="navbar-brand" href="index.php?langue=<?php echo ChoixLangue(); ?>">
 	   		<img src="images/icones/cards_01-512.png" alt="logo du jeu en JavaScript Le Gasp" class="d-inline-block align-top" id="icone"> 
 	        <?php echo THE_GASP_TITLE; ?></a>  
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +95,7 @@
 	        <div class="collapse navbar-collapse" id="navbarText">
 	            <ul class="navbar-nav mr-auto">
 	                <li class="nav-item">
-	                    <a class="nav-item nav-link" href="index.php"><?php echo NAV_BAR_AB; ?></a>
+	                    <a class="nav-item nav-link" href="index.php?langue=<?php echo ChoixLangue(); ?>"><?php echo NAV_BAR_AB; ?></a>
 	                </li>
 	                <li class="nav-item">
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalNouvellePartie"><?php echo NAV_BAR_NG; ?></a>
@@ -105,7 +107,7 @@
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos"><?php echo NAV_BAR_RL; ?></a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text"><?php echo NAV_BAR_VS; ?> 0.11.115</span>
+	            <span class="navbar-text"><?php version()."<a href='?langue=fr'>".Drapeau(); ?></a></span>
 	        </div>
 	    </nav>
 
@@ -205,182 +207,16 @@
                 
 	<footer class="row  mt-5">
 		<div class="col-12 text-center mt-5">
-		<p><?php echo FOOTER_TEXT; ?></p>
+		<?php footer(); ?>
 		</div>
 	</footer>
-    
-        <!-- Fenêtre modale pour les options -->
-    
-        <div class="modal fade" id="ModalOptions" tabindex="-1" role="dialog" aria-labelledby="ModalOptionsLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered " role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ModalOptionsLabel"><?php echo FM_OPT_TITLE; ?></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-    
-                <form name="formoptions">
-                
-                    <div class="modal-body text-justify">
-    
-                    <p><?php echo FM_OPT_TEXT; ?></p>
-        
-                    <p><strong><?php echo FM_OPT_BACK; ?></strong></p>
-    
-                    <img src="images/backs/back.png" id="1" onclick="mark(this)" class="cartes">	
-                    <img src="images/backs/red.png" id="2" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/old.png" id="3" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/russian.png" id="4" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/red2.png" id="5" onclick="mark(this)" class="cartes">
-                    <img src="images/backs/suisse.png" id="6" onclick="mark(this)" class="cartes">
-    
-                    </div>
-    
-                    <div class="modal-footer">
-                        <div class="col-md-12 text-center">
-                            <button type="button" class="btn btn-primary" onclick="	$('#ModalOptions').modal('hide');"><?php echo FM_OPT_SEND; ?></button>
-                        </div>
-                    </div>
-    
-                </form>
-    
-                </div>
-            </div>
-        </div>
-        
-        <!-- Fenêtre modale pour la nouvelle partie -->
-        
-        <div class="modal fade" id="ModalNouvellePartie" tabindex="-1" role="dialog" aria-labelledby="ModalNouvellePartieLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="ModalNouvellePartieLabel">Nouvelle partie</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body text-justify"><?php echo FM_NG_Q; ?></div>
-                <div class="modal-footer">
-                    <div class="col-md-12 text-center">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo FM_NO; ?></button>
-                        <button type="button" class="btn btn-primary" onclick="NouvellePartie()"><?php echo FM_YES; ?></button>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        
-        <!-- Fenêtre modale pour la fenêtre apropos -->
-        
-        <div class="modal fade" id="ModalApropos" tabindex="-1" role="dialog" aria-labelledby="ModalAproposLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="ModalAproposLabel"><?php echo FM_AB_TITLE; ?></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body text-justify">
-                    <?php echo FM_AB_TEXT; ?>
-                </div>
-                <div class="modal-footer">
-                    <div class="col-md-12 text-center">
-                        <div class="col-md-12 text-center">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo FM_CLOSE; ?></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        
-        <!-- Modale capture 01 -->
-        
-        <div class="modal fade" id="modalecapture01" tabindex="-1" role="dialog" aria-labelledby="modalecapture01Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            	<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp01.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Modale capture 02 -->
-        
-        <div class="modal fade" id="modalecapture02" tabindex="-1" role="dialog" aria-labelledby="modalecapture02Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               	<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp02.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Modale capture 03 -->
-        
-        <div class="modal fade" id="modalecapture03" tabindex="-1" role="dialog" aria-labelledby="modalecapture03Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            	<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp03.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Modale capture 04 -->
-        
-        <div class="modal fade" id="modalecapture04" tabindex="-1" role="dialog" aria-labelledby="modalecapture04Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-           		<div class="modal-header">
-			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			        <span aria-hidden="true">&times;</span>
-			        </button>
-			    </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">	
-                            <img src="images/captures/thegasp04.jpg" alt="capture d'écran d'une partie du jeu Le Gasp en JavaScript">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        
+
+    <?php 
+    include('include/options.inc.php'); 
+    include('include/nouvellepartie.inc.php');
+    include('include/apropos.inc.php'); 
+    ?>
+
 </section>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

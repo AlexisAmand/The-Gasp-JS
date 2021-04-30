@@ -1,5 +1,7 @@
 # Le Gasp
 
+*Note : En fonction de la fréquence des mises à jour, la version en ligne peut être différente de la version disponible sur GitHub.*
+
 Il s'agit d'un jeu développé en JavaScript, d'après un article sur le basic paru dans Jeux & Stratégie n°38 (Avril/Mai 1986).
 
 http://thegasp.genealexis.fr/code-basic.php
