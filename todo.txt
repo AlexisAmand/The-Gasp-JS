@@ -34,5 +34,3 @@ APRES MISE EN LIGNE
 VERSIONS :
 ----------
 
-- Tapis : + 0.1.0
-- Sessions : + 0.1.0

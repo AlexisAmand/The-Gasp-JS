@@ -140,22 +140,15 @@ include('langues/'.ChoixLangue().'.php');
 		<h4 class="mt-4"><?php echo AJS_TITLE;?></h4>
 		
 		<p><?php echo AJS_TEXT; ?></p>	
-
-
-
-
-
-
-
-		    
+	    
     		<figure class="text-center mt-4">
-	          <img src="images/presse/JS-38-page-54-1.jpg" class="figure-img img-fluid" alt="Article de presse sur Le Gasp paru dans Jeux et Stratégie n°38 en 1985">
-	          <figcaption class="figure-caption"><?php echo AJS_CAPTION_1; ?></figcaption>
+	          <img src="images/presse/le-gasp-07.jpg" class="figure-img img-fluid" alt="Article de presse sur Le Gasp paru dans Jeux et Stratégie n°38 en 1985">
+	          <figcaption class="figure-caption"><?php echo AJS_FIGCAPTION_1; ?></figcaption>
 	        </figure>
 	        
 	        <figure class="text-center mt-4">
-	          <img src="images/presse/JS-38-page-54-2.jpg" class="figure-img img-fluid" alt="Article de presse sur Le Gasp paru dans Jeux et Stratégie n°38 en 1985">
-	          <figcaption class="figure-caption"><?php echo AJS_CAPTION_2; ?></figcaption>
+	          <img src="images/presse/le-gasp-08.jpg" class="figure-img img-fluid" alt="Article de presse sur Le Gasp paru dans Jeux et Stratégie n°38 en 1985">
+	          <figcaption class="figure-caption"><?php echo AJS_FIGCAPTION_2; ?></figcaption>
 	        </figure>
 	        
 	        <br />

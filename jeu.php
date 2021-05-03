@@ -274,9 +274,6 @@ include('langues/'.ChoixLangue().'.php');
     </div>
 
 </footer>
-
-
-
 <?php 
 include('include/options.inc.php');  
 include('include/nouvellepartie.inc.php'); 
