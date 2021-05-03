@@ -1,16 +1,28 @@
-/* --------------- */
-/* Nouvelle partie */
-/* --------------- */
+/* ---------------------------------------------------- */
+/* Nouvelle partie : La grille de jeu est réinitialisée */
+/* ---------------------------------------------------- */
 
 function NouvellePartie()
 	{
 
-	/* Cette partie permet de faire un équivalent du $_GET[] en javascript */
+	dos = DosSession();
+
+	/* 
+	Cette partie permet un peu de faire un équivalent du $_GET[] en javascript. On regarde si il y a un param dans l'url. S'il y en a un, il devient la langue par défaut, sinon on met par défaut le Français.
+	*/
 
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams (queryString);
-	const langue = urlParams.get ('langue')
 
+	if (urlParams.get ('langue') != null) 
+		{
+		langue = urlParams.get ('langue')
+	  	}
+	else
+		{
+		langue = "fr"
+		}
+	
 	/* Lancement d'une nouvelle partie */
 
 	document.location.href = 'jeu.php?langue=' + langue;	
@@ -21,12 +33,10 @@ function NouvellePartie()
 		
 	for (var y = 0; y < 6; y++)
 		{
-		
 		for (var x = 0; x < 6; x++)
 			{
-				document.getElementById("carte" + x.toString() + y.toString()).src = dos;
-				grille[x][y] = "O";
-
+			document.getElementById("carte" + x.toString() + y.toString()).src = dos;
+			grille[x][y] = "O";
 			}
 		}
 	}
@@ -35,21 +45,24 @@ function NouvellePartie()
 /* Choix d'un deck dans les options de jeux */
 /* ---------------------------------------- */
 
-function mark(el) 
+function ChoixDos(eldos) 
 	{
 
 	/* la variable dos prend comme valeur le chemin vers l'image que l'on a choisi */
 
-	dos = el.src;
+	dos = eldos.src;
+	sessionStorage.setItem('carte', dos);
 
 	/* gestion du cadre bleu autour des images dans la modale des options */
 
-	for (var a = 1; a < 7; a++)
+	for (var a = 1; a < 6; a++)
 		{
 		document.getElementById(a).style.border = "0px solid blue";
 		}
 
-		el.style.border = "2px solid blue";
+	/* un cadre bleu autour du dos choisi */	
+
+	eldos.style.border = "2px solid blue";
 
 	/* on change le deck dans la partie en cours */	
 
@@ -57,13 +70,38 @@ function mark(el)
 		{	
 		for (var x = 0; x < 6; x++)
 			{
-				if (grille[x][y] == "O")
-					{
-					document.getElementById("carte" + x.toString() + y.toString()).src = dos;
-					}	
+			if (grille[x][y] == "O")
+				{
+				document.getElementById("carte" + x.toString() + y.toString()).src = dos;
+				}	
 			}
 		}
 	}	
+
+/* --------------------- */
+/* Choix du tapis de jeu */
+/* --------------------- */
+
+function ChoixTapis(tapis)
+	{
+	document.getElementById("BigPage").style.background = "url(images/fonds/fond-0" + tapis + ".jpg)";
+	document.getElementById("BigPage").style.backgroundSize = "cover";
+
+	/* gestion du cadre bleu autour des images dans la modale des options */
+
+	for (var a = 1; a < 4; a++)
+		{
+		document.getElementById("fond"+a).style.border = "0px solid blue";
+		}
+
+	/* un cadre bleu autour du fond choisi */
+
+	document.getElementById("fond" + tapis).style.border = "2px solid blue";
+
+	/* le fond choisi dans une session */
+
+	sessionStorage.setItem('fond', tapis);
+	}
 
 /* -------------------------------------------------------------------------------- */
 /* A chaque coups, cette fonction vérifie la grille, pour voir si le joueur a gagné */
@@ -86,11 +124,12 @@ function VerificationGrille()
 	if (perdu == 16)
 		{
 		$('#ModalBravo').modal('show');
-
 		$('#ModalBravo').on('shown.bs.modal', function (e) {
 			var modal = $(this)
 
-			/* Cette partie permet de faire un équivalent du $_GET[] en javascript */
+			/* 
+			Cette partie permet de faire un équivalent du $_GET[] en javascript. On récupère la langue par défaut et on affiche la modale qui correspond pour dire au joueur en combien de coups il a réussi.
+			*/
 
 			const queryString = window.location.search;
 			const urlParams = new URLSearchParams (queryString);
@@ -110,31 +149,33 @@ function VerificationGrille()
 					modal.find('.modal-body').text('Vous avez gagné en ' + nbCoups + ' coups !');
 					break;
 				}
-
 		  })
 		}
-
 	}
 
-/* ----------------------------------*/
-/* cette fonction retourne une carte */
-/* ----------------------------------*/
+/* ----------------------------------------------------------- */
+/* Cette fonction retourne les carte autour de la carte choisi */
+/* ----------------------------------------------------------- */
 	
 function retourne(xc, yc)
 	{
+
+	dos = DosSession();
 	
-	/* test jouer un son */
-	
-	var audio = new Audio('sounds/9388.mp3');
-	audio.play();
-	
-	/* ----------------- */
+	/* Joue un son quand on retroune les cartes */
+
+	if (sessionStorage.getItem('son') == '1')
+		{
+		var audio = new Audio('sounds/retournement.mp3');
+		audio.play();
+		}
+
+	/* Fait recto/verso ou verso/recto sur les cartes qui sont autour de la carte choisie */
 	
 	nbCoups = nbCoups + 1;
 	document.Info.coups.value = nbCoups	
 		for (var y = yc - 1; y < yc + 2; y++)
-			{
-			
+			{			
 			for (var x = xc - 1; x < xc + 2; x++)
 				{
 				if (grille[x][y] == "O")
@@ -161,43 +202,42 @@ function retourne(xc, yc)
 			grille[xc][yc] = "O";
 			}	
 
+		/* Appel de la fonction qui vérifie la grille pour vérifier si le joueur a gagné */
+
 		VerificationGrille();	
 	}
 
-/* ---------------------------------------- */
-/* Choix d'un fond dans les options de jeux */
-/* ---------------------------------------- */
+/* ---------------------------------------------- */
+/* Cette fonction récupére le dos dans la session */
+/* ---------------------------------------------- */
 
-/*
-function OptionWallpaper(el) 
+function DosSession()
 	{
-
-	for (var a = 11; a < 17; a++)
+	if (sessionStorage.carte)
 		{
-		document.getElementById(a).style.border = "0px solid blue";
+		dos = sessionStorage.getItem('carte');
+		}
+	else
+		{
+		dos = "images/backs/back-01.png";
 		}
 
-	el.style.border = "2px solid blue";
-	$('body').css("background-image", 'url("'+el.src+'")');
-	
+	return dos;
 	}
-*/
-	
+
 // Initialisation du nombre de coups
 	
 var nbCoups = 0;
-document.Info.coups.value = "0";	
+document.Info.coups.value = "0";
 	
 // création de la grille de jeu
 var grille = new Array();
-var dos = "images/backs/back.png";
 
 // initialisation de la grille. 
-// Elle fait 9x9 mais 6x6 pourrait être suffisant.
 
-for(var i=0; i<9; i++)
+for(var i=0; i<6; i++)
 	grille[i] = new Array();
 
-for(var i=0; i<9; i++)
-	for(var j=0; j<9; j++)
+for(var i=0; i<6; i++)
+	for(var j=0; j<6; j++)
 		grille[i][j] = "O";

@@ -26,6 +26,12 @@ img {
 #ModalOptions .cartes {
 	width: 70px;
 }
+
+/*
+#ModalOptions .fonds {
+	width: 0px;
+}
+*/
 	
 footer {
 	background-color: #f8f9fa;
