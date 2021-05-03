@@ -5,10 +5,12 @@
 function NouvellePartie()
 	{
 
+	dos = DosSession();
+
 	/* 
 	Cette partie permet un peu de faire un équivalent du $_GET[] en javascript. On regarde si il y a un param dans l'url. S'il y en a un, il devient la langue par défaut, sinon on met par défaut le Français.
 	*/
-	
+
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams (queryString);
 
@@ -49,6 +51,7 @@ function ChoixDos(eldos)
 	/* la variable dos prend comme valeur le chemin vers l'image que l'on a choisi */
 
 	dos = eldos.src;
+	sessionStorage.setItem('carte', dos);
 
 	/* gestion du cadre bleu autour des images dans la modale des options */
 
@@ -95,6 +98,11 @@ function ChoixTapis(tapis)
 	/* un cadre bleu autour du fond choisi */
 
 	document.getElementById("fond" + tapis).style.border = "2px solid blue";
+
+	/* le fond choisi dans une session */
+
+	sessionStorage.setItem('fond', tapis);
+
 	}
 
 /* -------------------------------------------------------------------------------- */
@@ -158,6 +166,8 @@ function VerificationGrille()
 	
 function retourne(xc, yc)
 	{
+
+	dos = DosSession();
 	
 	/* Joue un son quand on retroune les cartes */
 	
@@ -201,6 +211,24 @@ function retourne(xc, yc)
 		VerificationGrille();	
 	}
 
+/* ---------------------------------------------- */
+/* Cette fonction récupére le dos dans la session */
+/* ---------------------------------------------- */
+
+function DosSession()
+	{
+	if (sessionStorage.carte)
+		{
+		dos = sessionStorage.getItem('carte');
+		}
+	else
+		{
+		dos = "images/backs/back-01.png";
+		}
+	console.log("dos = " + dos);
+	return dos;
+	}
+
 // Initialisation du nombre de coups
 	
 var nbCoups = 0;
@@ -208,7 +236,7 @@ document.Info.coups.value = "0";
 	
 // création de la grille de jeu
 var grille = new Array();
-var dos = "images/backs/back.png";
+// var dos = "images/backs/back.png";
 
 // initialisation de la grille. 
 // Elle fait 9x9 mais 6x6 pourrait être suffisant.

@@ -12,6 +12,14 @@ TODO LIST
 
 - session pour garder en mémoire les parametres d'une partie
 
+BUGS
+----
+
+- http://legaspjs.test/le-gasp.php?langue=fr
+- en simulant la version mobile via brave, j'ai l'impression que l'espace en les lignes n'est pas bon
+- dans les options pas le cadre bleu pour les fonds si on est pas sur la page jeu.php
+- il faut mettre un cover sur le bg de jeu.php
+
 AVANT MISE EN LIGNE 
 -------------------
 
@@ -27,3 +35,4 @@ VERSIONS :
 ----------
 
 - Tapis : + 0.1.0
+- Sessions : + 0.1.0

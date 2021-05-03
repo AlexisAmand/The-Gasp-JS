@@ -141,10 +141,10 @@ include('langues/'.ChoixLangue().'.php');
             <div class="row justify-content-center">
 				
 				<div class="col-3">
-					<img id="carte10" src="#" onclick="retourne(1,0);"  class="H">
+					<img id="carte10" src="#" onclick="retourne(1,0);"  class="H">	
 					<img id="carte11" src="images/backs/back.png" onclick="retourne(1,1);">
 				</div>
-			
+				
 				<div class="col-3">
 					<img id="carte12" src="images/backs/back.png" onclick="retourne(1,2);">
 				</div>
@@ -154,7 +154,7 @@ include('langues/'.ChoixLangue().'.php');
 				</div>
 				
 				<div class="col-3">
-					<img id="carte14" src="images/backs/back.png" onclick="retourne(1,4);">	
+					<img id="carte14" src="images/backs/back.png" onclick="retourne(1,4);">
 					<img id="carte15" src="#" onclick="retourne(1,5);"  class="H">
 				</div>
 			
@@ -288,6 +288,50 @@ include('include/gagne.inc.php');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/thegasp.js"></script>
+
+<script type="text/javascript">
+
+/* On récupére le dos que le joueur à choisi et on personnalise ! */
+/* Si pas de session alors on applique le dos par défaut */
+
+alert("session ?");
+
+if (sessionStorage.carte)
+	{
+	dos = sessionStorage.getItem('carte');	
+	}
+else
+	{
+	dos = "images/backs/back-01.png";
+	}
+
+// dos = DosSession();
+
+/* Sur chaque carte, on applique le theme choisi */
+
+var ListCard = ["carte11","carte12","carte13","carte14","carte21","carte22","carte23","carte24","carte31","carte32","carte33","carte34","carte41","carte42","carte43","carte44"];
+
+for (i = 0; i < ListCard.length; i++) {
+	document.getElementById(ListCard[i]).src = dos; ;
+	}
+
+/* On récupére le fond que le joueur à choisi et on personnalise ! */
+/* Si pas de session alors on applique le dos par défaut */
+
+if (sessionStorage.fond)
+	{
+	console.log('fond=' + sessionStorage.getItem('fond'));
+	tapis = sessionStorage.getItem('fond');
+	}
+else
+	{
+	console.log('fond=' + sessionStorage.getItem('fond'));
+	tapis = "1";
+	}
+
+document.getElementById("BigPage").style.background = "url(images/fonds/fond-0" + tapis + ".jpg)";	
+
+</script>
 
 <!-- code Matomo pour Tarte au citron -->
       
