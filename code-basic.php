@@ -80,6 +80,8 @@ include('langues/'.ChoixLangue().'.php');
 </head>
   
 <body>
+
+<div id="BigPage"></div>
   
 <div class="container-fluid bg-light">
 

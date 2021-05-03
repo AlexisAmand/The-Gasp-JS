@@ -85,7 +85,7 @@ function ChoixDos(eldos)
 function ChoixTapis(tapis)
 	{
 	console.log(tapis);
-	document.getElementById("BigPage").style.background = "url(/images/fonds/fond-0" + tapis + ".jpg)";
+	document.getElementById("BigPage").style.background = "url(images/fonds/fond-0" + tapis + ".jpg)";
 	document.getElementById("BigPage").style.backgroundSize = "cover";
 
 	/* gestion du cadre bleu autour des images dans la modale des options */
@@ -97,7 +97,9 @@ function ChoixTapis(tapis)
 
 	/* un cadre bleu autour du fond choisi */
 
-	document.getElementById("fond" + tapis).style.border = "2px solid blue";
+	console.log(tapis);
+
+	// document.getElementById("fond" + tapis).style.border = "2px solid blue";
 
 	/* le fond choisi dans une session */
 

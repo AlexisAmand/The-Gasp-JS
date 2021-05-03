@@ -6,19 +6,13 @@ TODO LIST
 - commenter CSS / JS / PHP
 - Options : dans la modale, ça doit être des miniatures
 
-- pour les options, je peux peut-être changer les id="X" en id="Fond-X", ça devrait corriger le bug lié au cadre bleu sur le fond
-
-- fond random à chaque nouvelle partie ?
-
-- session pour garder en mémoire les parametres d'une partie
-
 BUGS
 ----
 
-- http://legaspjs.test/le-gasp.php?langue=fr
 - en simulant la version mobile via brave, j'ai l'impression que l'espace en les lignes n'est pas bon
-- dans les options pas le cadre bleu pour les fonds si on est pas sur la page jeu.php
-- il faut mettre un cover sur le bg de jeu.php
+- messages alert() et console.log a suppr
+- dans les options pas le cadre bleu pour les fonds si on est pas sur la page jeu.php. C'est juste que BigPage n'est sur les autres pages ^^
+
 
 AVANT MISE EN LIGNE 
 -------------------
@@ -30,7 +24,4 @@ APRES MISE EN LIGNE
 
 - sitemap
 - Google Search Console
-
-VERSIONS :
-----------
 
