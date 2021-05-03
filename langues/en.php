@@ -78,7 +78,6 @@ define("FM_CLOSE","Close");
 /* Fenêtre modale - Options */
 
 define("FM_OPT_TITLE","Options");
-define("FM_OPT_TEXT","Todo");
 define("FM_OPT_BACK","Back of the card");
 define("FM_OPT_SEND","Ok");
 

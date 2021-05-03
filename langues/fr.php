@@ -85,7 +85,6 @@ define("FM_CLOSE","Fermer");
 /* Fenêtre modale - Options */
 
 define("FM_OPT_TITLE","Options");
-define("FM_OPT_TEXT","Todo");
 define("FM_OPT_BACK","Dos de la carte");
 define("FM_OPT_SEND","Ok");
 

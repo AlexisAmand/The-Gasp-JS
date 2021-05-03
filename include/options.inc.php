@@ -14,8 +14,6 @@
         
             <div class="modal-body text-justify">
 
-            <p><?php echo FM_OPT_TEXT; ?></p>
-
             <p><strong><?php echo FM_OPT_BACK; ?></strong></p>
 
             <p class="text-center">
@@ -63,15 +61,13 @@
                     {
                     if(formoptions.customCheck1.checked==true)
                         {
-                        // on passe la session sur oui;
+                        // on passe la session sur "du son";
                         sessionStorage.setItem('son', "1");
-                        alert("du son");
                         }
                     else 
                         {
-                        // on passe la session sur non;
+                        // on passe la session sur "pas de son";
                         sessionStorage.setItem('son', "0");
-                        alert("pas de son");
                         }
                     }
 
@@ -89,6 +85,7 @@
                 else
                     {
                     document.write('<input type="checkbox" class="custom-control-input" id="customCheck1" checked onChange="ChangeStatut(formoptions)">');
+                    sessionStorage.setItem('son', "1");
                     }
                 </script>
 

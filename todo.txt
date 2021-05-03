@@ -1,18 +1,23 @@
 TODO LIST
 ---------
 
-- mettre une option qui permet de couper le son du jeu -> comment garder l'infos ? avec session.
 - commenter CSS / JS / PHP
+
 - Options : dans la modale, ça doit être des miniatures
+- optimiser la fenêtre des options pour la version mobile
+
 - faire le texte des options
 - textes dans fr.php
 - créer une version anglaise
+
 - quand a changé le fond -> cover
+
 - voir pour compresser les if en JS
 
 AVANT MISE EN LIGNE 
 -------------------
 
+- compresser les css et les js
 - lien dans htaccess
 
 APRES MISE EN LIGNE
@@ -26,6 +31,4 @@ VERSION
 
 + 0.0.4 ??
 + 0.1.0 : possibilité de couper le son dans les options
-
-
-
++ 0.0.4 : Pas possible de réactiver le son
