@@ -84,7 +84,6 @@ function ChoixDos(eldos)
 
 function ChoixTapis(tapis)
 	{
-	console.log(tapis);
 	document.getElementById("BigPage").style.background = "url(images/fonds/fond-0" + tapis + ".jpg)";
 	document.getElementById("BigPage").style.backgroundSize = "cover";
 
@@ -97,14 +96,11 @@ function ChoixTapis(tapis)
 
 	/* un cadre bleu autour du fond choisi */
 
-	console.log(tapis);
-
-	// document.getElementById("fond" + tapis).style.border = "2px solid blue";
+	document.getElementById("fond" + tapis).style.border = "2px solid blue";
 
 	/* le fond choisi dans une session */
 
 	sessionStorage.setItem('fond', tapis);
-
 	}
 
 /* -------------------------------------------------------------------------------- */
@@ -137,11 +133,8 @@ function VerificationGrille()
 			*/
 
 			const queryString = window.location.search;
-			//console.log (queryString);
 			const urlParams = new URLSearchParams (queryString);
-
 			const langue = urlParams.get ('langue')
-			//console.log (langue);
 
 			/* affichage de la fenêtre modale qui affiche les résultats */
 
@@ -227,7 +220,7 @@ function DosSession()
 		{
 		dos = "images/backs/back-01.png";
 		}
-	console.log("dos = " + dos);
+
 	return dos;
 	}
 

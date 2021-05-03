@@ -10,7 +10,6 @@ BUGS
 ----
 
 - en simulant la version mobile via brave, j'ai l'impression que l'espace en les lignes n'est pas bon
-- messages alert() et console.log a suppr
 - dans les options pas le cadre bleu pour les fonds si on est pas sur la page jeu.php. C'est juste que BigPage n'est sur les autres pages ^^
 
 

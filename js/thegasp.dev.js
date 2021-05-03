@@ -8,11 +8,8 @@ function NouvellePartie()
 	/* Cette partie permet de faire un équivalent du $_GET[] en javascript */
 
 	const queryString = window.location.search;
-	console.log (queryString);
 	const urlParams = new URLSearchParams (queryString);
-
 	const langue = urlParams.get ('langue')
-	console.log (langue);
 
 	/* Lancement d'une nouvelle partie */
 
@@ -96,11 +93,8 @@ function VerificationGrille()
 			/* Cette partie permet de faire un équivalent du $_GET[] en javascript */
 
 			const queryString = window.location.search;
-			console.log (queryString);
 			const urlParams = new URLSearchParams (queryString);
-
 			const langue = urlParams.get ('langue')
-			console.log (langue);
 
 			/* affichage de la fenêtre modale qui affiche les résultats */
 

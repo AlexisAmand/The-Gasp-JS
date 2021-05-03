@@ -291,8 +291,6 @@ include('include/gagne.inc.php');
 /* On récupére le dos que le joueur à choisi et on personnalise ! */
 /* Si pas de session alors on applique le dos par défaut */
 
-alert("session ?");
-
 if (sessionStorage.carte)
 	{
 	dos = sessionStorage.getItem('carte');	
@@ -317,12 +315,10 @@ for (i = 0; i < ListCard.length; i++) {
 
 if (sessionStorage.fond)
 	{
-	console.log('fond=' + sessionStorage.getItem('fond'));
 	tapis = sessionStorage.getItem('fond');
 	}
 else
 	{
-	console.log('fond=' + sessionStorage.getItem('fond'));
 	tapis = "1";
 	}
 
