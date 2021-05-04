@@ -1,14 +1,5 @@
 <?php 
 
-/* --------------------------------- */
-/* Cette fonction affiche la version */
-/* --------------------------------- */
-
-function version()
-    {
-    echo NAV_BAR_VS."&nbsp;"."0.16.12b"."&nbsp;";
-    }
-
 /* ----------------------------------------------------------------------- */
 /* Cette fonction choisi le bon fichier de langue au chargement d'une page */
 /* ----------------------------------------------------------------------- */

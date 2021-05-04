@@ -1,9 +1,16 @@
+/* -------------------------- */
+/* Récupération de la version */
+/* -------------------------- */
+
+function Version() {
+	document.getElementById('version').innerHTML = "Version 0.17.33b ";
+}
+
 /* ---------------------------------------------------- */
 /* Nouvelle partie : La grille de jeu est réinitialisée */
 /* ---------------------------------------------------- */
 
-function NouvellePartie()
-	{
+function NouvellePartie() {
 
 	dos = DosSession();
 
@@ -14,14 +21,11 @@ function NouvellePartie()
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams (queryString);
 
-	if (urlParams.get ('langue') != null) 
-		{
+	if (urlParams.get ('langue') != null) {
 		langue = urlParams.get ('langue')
-	  	}
-	else
-		{
+	} else {
 		langue = "fr"
-		}
+	}
 	
 	/* Lancement d'une nouvelle partie */
 
@@ -31,22 +35,19 @@ function NouvellePartie()
 
 	$('#ModalNouvellePartie').modal('hide');
 		
-	for (var y = 0; y < 6; y++)
-		{
-		for (var x = 0; x < 6; x++)
-			{
+	for (var y = 0; y < 6; y++) {
+		for (var x = 0; x < 6; x++) {
 			document.getElementById("carte" + x.toString() + y.toString()).src = dos;
 			grille[x][y] = "O";
-			}
 		}
 	}
+}
 
 /* ---------------------------------------- */
 /* Choix d'un deck dans les options de jeux */
 /* ---------------------------------------- */
 
-function ChoixDos(eldos) 
-	{
+function ChoixDos(eldos) {
 
 	/* la variable dos prend comme valeur le chemin vers l'image que l'on a choisi */
 
@@ -55,10 +56,9 @@ function ChoixDos(eldos)
 
 	/* gestion du cadre bleu autour des images dans la modale des options */
 
-	for (var a = 1; a < 6; a++)
-		{
+	for (var a = 1; a < 6; a++)	{
 		document.getElementById(a).style.border = "0px solid blue";
-		}
+	}
 
 	/* un cadre bleu autour du dos choisi */	
 
@@ -66,33 +66,29 @@ function ChoixDos(eldos)
 
 	/* on change le deck dans la partie en cours */	
 
-	for (var y = 0; y < 6; y++)
-		{	
-		for (var x = 0; x < 6; x++)
-			{
-			if (grille[x][y] == "O")
-				{
+	for (var y = 0; y < 6; y++) {	
+		for (var x = 0; x < 6; x++) {
+			if (grille[x][y] == "O") {
 				document.getElementById("carte" + x.toString() + y.toString()).src = dos;
-				}	
-			}
+			}	
 		}
-	}	
+	}
+}	
 
 /* --------------------- */
 /* Choix du tapis de jeu */
 /* --------------------- */
 
-function ChoixTapis(tapis)
-	{
+function ChoixTapis(tapis) {
+
 	document.getElementById("BigPage").style.background = "url(images/fonds/fond-0" + tapis + ".jpg)";
 	document.getElementById("BigPage").style.backgroundSize = "cover";
 
 	/* gestion du cadre bleu autour des images dans la modale des options */
 
-	for (var a = 1; a < 4; a++)
-		{
+	for (var a = 1; a < 4; a++) {
 		document.getElementById("fond"+a).style.border = "0px solid blue";
-		}
+	}
 
 	/* un cadre bleu autour du fond choisi */
 
@@ -101,28 +97,24 @@ function ChoixTapis(tapis)
 	/* le fond choisi dans une session */
 
 	sessionStorage.setItem('fond', tapis);
-	}
+}
 
 /* -------------------------------------------------------------------------------- */
 /* A chaque coups, cette fonction vérifie la grille, pour voir si le joueur a gagné */
 /* -------------------------------------------------------------------------------- */
 	
-function VerificationGrille()
-	{
+function VerificationGrille() {
+
 	var perdu = 0;
-	for (var y = 1; y < 5; y++)
-		{			
-		for (var x = 1; x < 5; x++)
-			{
-			if (grille[x][y] == "X")
-				{
+	for (var y = 1; y < 5; y++) {			
+		for (var x = 1; x < 5; x++) {
+			if (grille[x][y] == "X") {
 				perdu = perdu + 1;
-				}
 			}
 		}
+	}
 	
-	if (perdu == 16)
-		{
+	if (perdu == 16) {
 		$('#ModalBravo').modal('show');
 		$('#ModalBravo').on('shown.bs.modal', function (e) {
 			var modal = $(this)
@@ -137,8 +129,7 @@ function VerificationGrille()
 
 			/* affichage de la fenêtre modale qui affiche les résultats */
 
-			switch(langue)
-				{
+			switch(langue) {
 				case 'fr':
 					modal.find('.modal-body').text('Vous avez gagné en ' + nbCoups + ' coups !');
 					break;
@@ -148,82 +139,84 @@ function VerificationGrille()
 				default:
 					modal.find('.modal-body').text('Vous avez gagné en ' + nbCoups + ' coups !');
 					break;
-				}
-		  })
-		}
+			}
+		})
 	}
+}
 
 /* ----------------------------------------------------------- */
 /* Cette fonction retourne les carte autour de la carte choisi */
 /* ----------------------------------------------------------- */
 	
-function retourne(xc, yc)
-	{
+function retourne(xc, yc) {
 
 	dos = DosSession();
 	
 	/* Joue un son quand on retroune les cartes */
 
-	if (sessionStorage.getItem('son') == '1')
-		{
+	if (sessionStorage.getItem('son') == '1') {
 		var audio = new Audio('sounds/retournement.mp3');
 		audio.play();
-		}
+	}
 
 	/* Fait recto/verso ou verso/recto sur les cartes qui sont autour de la carte choisie */
 	
 	nbCoups = nbCoups + 1;
-	document.Info.coups.value = nbCoups	
-		for (var y = yc - 1; y < yc + 2; y++)
-			{			
-			for (var x = xc - 1; x < xc + 2; x++)
-				{
-				if (grille[x][y] == "O")
-					{
-					document.getElementById("carte" + x.toString() + y.toString()).src = "images/carte" + x.toString() + y.toString() + ".png";
-					grille[x][y] = "X";
-					}
-				else
-					{
-					document.getElementById("carte" + x.toString() + y.toString()).src = dos;
-					grille[x][y] = "O";
-					}
-				}
+	document.Info.coups.value = nbCoups
+
+	for (var y = yc - 1; y < yc + 2; y++) {			
+		for (var x = xc - 1; x < xc + 2; x++) {
+			if (grille[x][y] == "O") {
+				document.getElementById("carte" + x.toString() + y.toString()).src = "images/carte" + x.toString() + y.toString() + ".png";
+				grille[x][y] = "X";
 			}
-
-		if (grille[xc][yc] == "O")
-			{
-			document.getElementById("carte" + xc.toString() + yc.toString()).src = "images/carte" + xc.toString() + yc.toString() + ".png";
-			grille[xc][yc] = "X";
+			else {
+				document.getElementById("carte" + x.toString() + y.toString()).src = dos;
+				grille[x][y] = "O";
 			}
-		else
-			{
-			document.getElementById("carte" + xc.toString() + yc.toString()).src = dos;
-			grille[xc][yc] = "O";
-			}	
-
-		/* Appel de la fonction qui vérifie la grille pour vérifier si le joueur a gagné */
-
-		VerificationGrille();	
+		}
 	}
+
+	if (grille[xc][yc] == "O") {
+		document.getElementById("carte" + xc.toString() + yc.toString()).src = "images/carte" + xc.toString() + yc.toString() + ".png";
+		grille[xc][yc] = "X";
+	} else {
+		document.getElementById("carte" + xc.toString() + yc.toString()).src = dos;
+		grille[xc][yc] = "O";
+	}	
+
+	/* Appel de la fonction qui vérifie la grille pour vérifier si le joueur a gagné */
+
+	VerificationGrille();	
+}
 
 /* ---------------------------------------------- */
 /* Cette fonction récupére le dos dans la session */
 /* ---------------------------------------------- */
 
-function DosSession()
-	{
-	if (sessionStorage.carte)
-		{
+function DosSession() {
+	if (sessionStorage.carte) {
 		dos = sessionStorage.getItem('carte');
-		}
-	else
-		{
+	} else {
 		dos = "images/backs/back-01.png";
-		}
+	}
 
 	return dos;
+}
+
+/* ------------------------------------------- */
+/* fonction qui active/desactive le son du jeu */
+/* ------------------------------------------- */
+
+function ChangeStatut(formoptions) {
+	if(formoptions.customCheck1.checked==true) {
+		// on passe la session sur "du son";
+		sessionStorage.setItem('son', "1");
+	} else {
+		// on passe la session sur "pas de son";
+		sessionStorage.setItem('son', "0");
 	}
+}
 
 // Initialisation du nombre de coups
 	

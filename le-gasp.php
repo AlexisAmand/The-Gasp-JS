@@ -25,9 +25,9 @@ include('langues/'.ChoixLangue().'.php');
 	
 	<link rel="icon" type="image/png" href="images/icones/cards_01-512.png" />
 
-	<!-- vérifs de Google pour Search Console -->
+	<!-- Le Gasp -->
 
-	<meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />
+	<script src="js/game.js"></script>
 
     <!-- code pour le RGPD -->
 
@@ -111,7 +111,7 @@ include('langues/'.ChoixLangue().'.php');
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos"><?php echo NAV_BAR_RL; ?></a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text"><?php version()."<a href='?langue=fr'>".Drapeau(); ?></a></span>
+	            <span class="navbar-text" id="version"><script type="text/javascript">Version();</script><?php echo "<a href='?langue=fr'>".Drapeau(); ?></a></span>
 	        </div>
 	    </nav>
 
@@ -175,7 +175,6 @@ include('langues/'.ChoixLangue().'.php');
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="js/game.js"></script>
 
 <!-- code Matomo pour Tarte au citron -->
       
@@ -185,8 +184,8 @@ tarteaucitron.user.matomoId = 13;
 </script>
 
 <script>
-		$('#demoLightbox').lightbox(options)
-		</script>
+	$('#demoLightbox').lightbox(options)
+</script>
 
 </body>
 </html>

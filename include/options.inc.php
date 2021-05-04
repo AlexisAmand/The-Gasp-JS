@@ -53,40 +53,16 @@
             <div class="custom-control custom-checkbox">
             <script type="text/javascript">
 
-                /* ------------------------------------------- */
-                /* fonction qui active/desactive le son du jeu */
-                /* ------------------------------------------- */
-
-                function ChangeStatut(formoptions) 
-                    {
-                    if(formoptions.customCheck1.checked==true)
-                        {
-                        // on passe la session sur "du son";
-                        sessionStorage.setItem('son', "1");
-                        }
-                    else 
-                        {
-                        // on passe la session sur "pas de son";
-                        sessionStorage.setItem('son', "0");
-                        }
-                    }
-
-                if (sessionStorage.son)
-                    {
-                    if(sessionStorage.getItem("son") == "1")
-                        {
+                if (sessionStorage.son) {
+                    if(sessionStorage.getItem("son") == "1") {
                         document.write('<input type="checkbox" class="custom-control-input" id="customCheck1" checked onChange="ChangeStatut(formoptions)">');
-                        }
-                    else
-                        {
+                    } else {
                         document.write('<input type="checkbox" class="custom-control-input" id="customCheck1 onChange="ChangeStatut(formoptions)">');
-                        }
                     }
-                else
-                    {
+                } else {
                     document.write('<input type="checkbox" class="custom-control-input" id="customCheck1" checked onChange="ChangeStatut(formoptions)">');
                     sessionStorage.setItem('son', "1");
-                    }
+                }
                 </script>
 
                 <label class="custom-control-label" for="customCheck1">Activer le son du jeu</label>

@@ -24,6 +24,10 @@ include('langues/'.ChoixLangue().'.php');
 	
 	<link rel="icon" type="image/png" href="images/icones/cards_01-512.png" />
 
+	<!-- Le Gasp -->
+
+	<script src="js/game.js"></script>
+
 	<!-- code pour le RGPD -->
 
     <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
@@ -106,7 +110,7 @@ include('langues/'.ChoixLangue().'.php');
 							<a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos"><?php echo NAV_BAR_RL; ?></a>
 						</li>
 					</ul>
-					<span class="navbar-text"><?php version()."<a href='?langue=fr'>".Drapeau(); ?></a></span>
+					<span class="navbar-text" id="version"><script type="text/javascript">Version();</script><?php echo "<a href='?langue=fr'>".Drapeau(); ?></a></span>
 				</div>
 			</nav>               
         
@@ -284,21 +288,17 @@ include('include/gagne.inc.php');
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/game.js"></script>
 
 <script type="text/javascript">
 
 /* On récupére le dos que le joueur à choisi et on personnalise ! */
 /* Si pas de session alors on applique le dos par défaut */
 
-if (sessionStorage.carte)
-	{
+if (sessionStorage.carte) {
 	dos = sessionStorage.getItem('carte');	
-	}
-else
-	{
+} else {
 	dos = "images/backs/back-01.png";
-	}
+}
 
 // dos = DosSession();
 
@@ -313,14 +313,11 @@ for (i = 0; i < ListCard.length; i++) {
 /* On récupére le fond que le joueur à choisi et on personnalise ! */
 /* Si pas de session alors on applique le dos par défaut */
 
-if (sessionStorage.fond)
-	{
+if (sessionStorage.fond) {
 	tapis = sessionStorage.getItem('fond');
-	}
-else
-	{
+} else {
 	tapis = "1";
-	}
+}
 
 document.getElementById("BigPage").style.background = "url(images/fonds/fond-0" + tapis + ".jpg)";	
 

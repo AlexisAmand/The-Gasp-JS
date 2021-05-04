@@ -1,6 +1,9 @@
 TODO LIST
 ---------
 
+- caractères spéciaux dans mon JS
+- revoir possition des { }
+
 - commenter CSS / JS / PHP
 
 - Options : dans la modale, ça doit être des miniatures
@@ -12,7 +15,9 @@ TODO LIST
 
 - quand a changé le fond -> cover
 
-- voir pour compresser les if en JS
+- plus de PHP du tout ? XD
+
+- document.write serait à bannir
 
 AVANT MISE EN LIGNE 
 -------------------
@@ -25,10 +30,3 @@ APRES MISE EN LIGNE
 
 - sitemap
 - Google Search Console
-
-VERSION 
--------
-
-+ 0.0.4 ??
-+ 0.1.0 : possibilité de couper le son dans les options
-+ 0.0.4 : Pas possible de réactiver le son
