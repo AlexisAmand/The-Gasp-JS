@@ -12,6 +12,7 @@ TODO LIST
 - faire le texte des options
 - textes dans fr.php
 - créer une version anglaise
+- les constantes PHP dans JS.
 
 - quand a changé le fond -> cover
 

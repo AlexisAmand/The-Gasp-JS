@@ -23,10 +23,6 @@ include('langues/'.ChoixLangue().'.php');
 	
 	<link rel="icon" type="image/png" href="images/icones/cards_01-512.png" />
 
-	<!-- Le Gasp -->
-
-	<script src="js/game.js"></script>
-
     <!-- code pour le RGPD -->
 
     <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
@@ -77,6 +73,10 @@ include('langues/'.ChoixLangue().'.php');
 
         <script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
 
+		<!-- Le Gasp : fichier js pour les langues -->
+
+		<script src="js/langue.js"></script>
+
 </head>
   
 <body>
@@ -109,7 +109,7 @@ include('langues/'.ChoixLangue().'.php');
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos"><?php echo NAV_BAR_RL; ?></a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text" id="version"><script type="text/javascript">Version();</script><?php echo "<a href='?langue=fr'>".Drapeau(); ?></a></span>
+	            <span class="navbar-text" id="version"><script type="text/javascript">Version();</script></span>
 	        </div>
 	    </nav>
 
@@ -160,8 +160,11 @@ include('langues/'.ChoixLangue().'.php');
 	</article>
                 
 	<footer class="row  mt-5">
-		<div class="col-12 text-center mt-5">
-		<?php footer(); ?>
+		<div class="col-12 text-center mt-5" id="footer">
+			<script type="text/javascript">
+				Footer();
+			</script>
+			<?php echo "<br />".FOOTER_TEXT; ?>
 		</div>
 	</footer>
 	
@@ -183,6 +186,10 @@ include('langues/'.ChoixLangue().'.php');
 tarteaucitron.user.matomoId = 13;
 (tarteaucitron.job = tarteaucitron.job || []).push('matomo');
 </script>
+
+<!-- Le Gasp : fichier JS pour le jeu -->
+
+<script src="js/game.js"></script>
 
 </body>
 </html>

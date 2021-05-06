@@ -23,10 +23,6 @@ include('langues/'.ChoixLangue().'.php');
 	
 	<link rel="icon" type="image/png" href="images/icones/cards_01-512.png" />
 
-	<!-- Le Gasp -->
-
-	<script src="js/game.js"></script>
-
     <!-- code pour le RGPD -->
 
     <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
@@ -77,6 +73,10 @@ include('langues/'.ChoixLangue().'.php');
 
         <script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
 
+		<!-- Le Gasp : fichier js pour les langues -->
+
+		<script src="js/langue.js"></script>
+
 </head>
   
 <body>
@@ -109,7 +109,7 @@ include('langues/'.ChoixLangue().'.php');
 	                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#ModalApropos"><?php echo NAV_BAR_RL; ?></a>
 	                </li>
 	            </ul>
-	            <span class="navbar-text" id="version"><script type="text/javascript">Version();</script><?php echo "<a href='?langue=fr'>".Drapeau(); ?></a></span>
+	            <span class="navbar-text" id="version"><script type="text/javascript">Version();</script></span>
 	        </div>
 	    </nav>
 
@@ -208,8 +208,11 @@ include('langues/'.ChoixLangue().'.php');
 	</article>
                 
 	<footer class="row  mt-5">
-		<div class="col-12 text-center mt-5">
-		<?php footer(); ?>
+		<div class="col-12 text-center mt-5" id="footer">
+			<script type="text/javascript">
+				Footer();
+			</script>
+			<?php echo "<br />".FOOTER_TEXT; ?>
 		</div>
 	</footer>
 
@@ -224,6 +227,10 @@ include('langues/'.ChoixLangue().'.php');
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<!-- Le Gasp : fichier JS pour le jeu -->
+
+	<script src="js/game.js"></script>
       
 <!-- code Matomo pour Tarte au citron -->
       
