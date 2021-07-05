@@ -31,7 +31,7 @@
 
             </p>
 
-            <p><strong>Terrain de jeu</strong></p>
+            <p><strong><?php echo FM_OPT_PLAYGND; ?></strong></p>
 
             <p class="text-center">
 
@@ -65,7 +65,7 @@
                 }
                 </script>
 
-                <label class="custom-control-label" for="customCheck1">Activer le son du jeu</label>
+                <label class="custom-control-label" for="customCheck1"><?php echo FM_OPT_SND;?></label>
             </div>
 
             </div>

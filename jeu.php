@@ -116,7 +116,7 @@ include('langues/'.ChoixLangue().'.php');
 					</ul>
 					<span class="navbar-text" id="version"><script type="text/javascript">Version();</script></span>
 				</div>
-			</nav>               
+			</nav>
         
 		</div>
 

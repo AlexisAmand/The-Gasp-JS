@@ -97,6 +97,8 @@ function ChoixTapis(tapis) {
 	
 function VerificationGrille() {
 
+	/* Pour vérifier si le joueur a gagné, on compte le nombre de cartes retournées via la variable perdu */
+
 	var perdu = 0;
 	for (var y = 1; y < 5; y++) {			
 		for (var x = 1; x < 5; x++) {
@@ -155,7 +157,7 @@ function retourne(xc, yc) {
 	
 	nbCoups = nbCoups + 1;
 	document.Info.coups.value = nbCoups
-
+	
 	for (var y = yc - 1; y < yc + 2; y++) {			
 		for (var x = xc - 1; x < xc + 2; x++) {
 			if (grille[x][y] == "O") {
@@ -214,11 +216,10 @@ function ChangeStatut(formoptions) {
 /* Cette fonction affiche les infos du footer */
 /* ------------------------------------------ */
 
-function Footer()
-    {
+function Footer() {
 	var d=new Date();
 	document.getElementById('footer').innerHTML = "© 2018-" + d.getFullYear() + " - Alexis AMAND";
-    }
+}
 
 // Initialisation du nombre de coups
 	

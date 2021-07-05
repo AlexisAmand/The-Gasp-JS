@@ -24,6 +24,7 @@ define("IND_TEXT_1","Il y a quelques mois, j'ai découvert un <a href='le-gasp.p
 define("IND_TEXT_2","Selon la revue que j'ai citée plus haut, il existe des solutions en 6, 8 et 10 coups !");
 define("IND_START_GAME","Lancer une partie de Le Gasp JS");
 define("IND_GITHUB","Si vous êtes curieux, le code source de la version JS est disponible sur GitHub :<br /><a href='https://github.com/AlexisAmand/The-Gasp-JS' title='code source du jeu Le Gasp en JavaScript sur GitHub'>https://github.com/AlexisAmand/The-Gasp-JS</a>");
+define("IND_START","Commencer une partie !");
 
 /* Article JS de 1985 */
 
@@ -86,6 +87,8 @@ define("FM_CLOSE","Fermer");
 
 define("FM_OPT_TITLE","Options");
 define("FM_OPT_BACK","Dos de la carte");
+define("FM_OPT_PLAYGND","Terrain de jeu");
+define("FM_OPT_SND","Activer le son du jeu");
 define("FM_OPT_SEND","Ok");
 
 /* Fenêtre modale - Nouvelle partie */

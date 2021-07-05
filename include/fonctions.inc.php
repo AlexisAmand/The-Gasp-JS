@@ -6,6 +6,11 @@
 
 function ChoixLangue()
     {
+    /*
+    echo "<script type='text/javascript'>";
+    echo "ChoixLangue()";
+    echo "</script>";
+    */
     if (isset($_GET['langue']))
         {
         return $_GET['langue'];
@@ -14,7 +19,39 @@ function ChoixLangue()
         {
         return substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
         }
+    
     }
+
+/* ------------------------------------------------------------- */
+/* Cette fonction affiche le drapeau de choix de la langue en/fr */
+/* ------------------------------------------------------------- */
+
+/*
+
+function Drapeau()
+    {
+    if (isset($_GET['langue']))
+        {
+        switch($_GET['langue'])
+            {
+            case 'en':
+                echo '<a href="?langue=fr"><img class="ml-2 icone" src="images/icones/flag-fr.svg"></a>';
+                break;
+            case 'fr':
+                echo '<a href="?langue=en"><img class="ml-2 icone" src="images/icones/flag-en.svg"></a>';
+                break;
+            default:
+            echo '<a href="?langue=en"><img class="ml-2 icone" src="images/icones/flag-en.svg"></a>';
+                break;
+            }
+        }
+    else
+        {
+        echo '<a href="?langue=fr"><img class="ml-2 icone" src="images/icones/flag-en.svg"></a>';
+        }
+    }
+
+*/
 
 /* -------------------------------------------------------- */
 /* Cette fonction affiche une image dans une fenêtre modale */
@@ -48,6 +85,7 @@ function ModaleImage($images, $alt)
 /* -------------------------------- */
 
 /*
+
 function footer()
     {
     echo '<p>';
@@ -55,5 +93,6 @@ function footer()
 	echo FOOTER_TEXT;
     echo '</p>';
     }
+    
 */
 
