@@ -162,20 +162,23 @@ include('langues/'.ChoixLangue().'.php');
 	</article>
                 
 	<footer class="row  mt-5">
-		<div class="col-12 text-center mt-5" id="footer">
+		<div class="col-12 text-center mt-5">
+			<p id="footer">
 			<script type="text/javascript">
 				Footer();
 			</script>
-			<?php echo "<br />".FOOTER_TEXT; ?>
+			<?php echo "<br />".FOOTER_TEXT."</p>"; ?>
 		</div>
 	</footer>
   
     <?php 
+
+	/* Les 3 fenêtres modales nécessaires sur la page */
+
     include('include/options.inc.php');  
     include('include/nouvellepartie.inc.php'); 
     include('include/apropos.inc.php');
     ?>
-
 
 </section>
 

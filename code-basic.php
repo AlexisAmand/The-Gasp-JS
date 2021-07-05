@@ -208,15 +208,19 @@ include('langues/'.ChoixLangue().'.php');
 	</article>
                 
 	<footer class="row  mt-5">
-		<div class="col-12 text-center mt-5" id="footer">
+		<div class="col-12 text-center mt-5">
+			<p id="footer">
 			<script type="text/javascript">
 				Footer();
 			</script>
-			<?php echo "<br />".FOOTER_TEXT; ?>
+			<?php echo "<br />".FOOTER_TEXT."</p>"; ?>
 		</div>
 	</footer>
 
-    <?php 
+	<?php 
+
+	/* Les 3 fenêtres modales nécessaires sur la page */
+
     include('include/options.inc.php'); 
     include('include/nouvellepartie.inc.php');
     include('include/apropos.inc.php'); 
@@ -228,10 +232,6 @@ include('langues/'.ChoixLangue().'.php');
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-	<!-- Le Gasp : fichier JS pour le jeu -->
-
-	<script src="js/game.js"></script>
-      
 <!-- code Matomo pour Tarte au citron -->
       
 <script type="text/javascript">
