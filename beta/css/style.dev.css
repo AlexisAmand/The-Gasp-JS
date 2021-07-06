@@ -1,0 +1,38 @@
+small {	font-size: 68%; }
+	
+#Plateau {
+	background-image:url('../images/fonds/fond-01.jpg');
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+	background-position: center;
+	background-attachment: fixed; }
+
+.icone { width:30px;height:30px; }
+
+.H { display:none; }
+	
+.col-3 { text-align:center; }
+	
+#ModalOptions .cartes {	width: 70px; }
+	
+#ModalOptions .fonds { width: 140px; }
+
+small {	font-size: 68%; }
+	
+#titre { background-color: rgba(0, 0, 0, 0.2); }	
+
+#titre h2 { color:white;font-family: 'Raleway', sans-serif;font-size:2.2em; }
+
+#titre, #slogan { min-height: 20vh;	}
+
+@media (max-width: 575.98px) 
+	{ 
+	#titre { text-align: center; }
+	#slogan { visibility: hidden; }
+	#titre, #slogan { min-height: 25vh; }
+	}
+	
+footer a { text-decoration:underline; }
+	
+footer p { font-size:0.8em; }
+
