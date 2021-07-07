@@ -215,16 +215,6 @@ function ChangeStatut(formoptions) {
 	}
 }
 
-/* ------------------------------------------ */
-/* Cette fonction affiche les infos du footer */
-/* ------------------------------------------ */
-
-function Footer()
-    {
-	var d=new Date();
-	document.getElementById('footer').innerHTML = "© 2018-" + d.getFullYear() + " - Alexis AMAND";
-    }
-
 // Initialisation du nombre de coups
 	
 var nbCoups = 0;

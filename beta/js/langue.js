@@ -25,3 +25,12 @@ function Version() {
 		
 	document.getElementById('version').innerHTML = "Version 0.17.52b "+ imageDrapeau;
 }
+
+/* ------------------------------------------ */
+/* Cette fonction affiche les infos du footer */
+/* ------------------------------------------ */
+
+function Footer() {
+	var d=new Date();
+	document.getElementById('footer').innerHTML = "© 2018-" + d.getFullYear() + " - Alexis AMAND";
+}

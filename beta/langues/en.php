@@ -78,7 +78,7 @@ define("ML_COOKIES","In order to adapt to its audience, the site measures the nu
 /* Footer */
 
 define("FOOTER_TEXT","Site hosted by <a href='https://www.amen.fr/'>Amen France</a> - <a href='/mentions-legales.php'>Mentions légales</a><br />
-Game adapted by <a href='http://twitter.com/alexisamand' target='_blank' title='Alexis Amand - Développeur à Valenciennes'>Alexis AMAND</a> based on Francis Piault and Michel Brassinne</a>");
+Game adapted by <a href='http://twitter.com/alexisamand' target='_blank' title='Alexis Amand - Développeur à Valenciennes'>Alexis AMAND</a> based from Francis Piault and Michel Brassinne</a>");
 
 /* Fenêtres modales - textes en communs */
 

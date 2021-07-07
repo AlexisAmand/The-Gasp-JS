@@ -161,16 +161,14 @@ include('langues/'.ChoixLangue().'.php');
 	        
 	</article>
                 
-	<footer class="row  mt-5">
-		<div class="col-12 text-center mt-5" id="footer">
-			<script type="text/javascript">
-				Footer();
-			</script>
-			<?php echo "<br />".FOOTER_TEXT; ?>
-		</div>
-	</footer>
-  
     <?php 
+
+	/* Le pied de page */
+
+	include('include/footer.inc.php');
+
+	/* Les 7 fenêtres modales nécessaires sur la page */
+
     include('include/options.inc.php');  
     include('include/nouvellepartie.inc.php'); 
     include('include/apropos.inc.php');
