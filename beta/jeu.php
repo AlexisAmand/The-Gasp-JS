@@ -125,134 +125,134 @@ include('langues/'.ChoixLangue().'.php');
 		<div class="row mt-5 justify-content-center">
 		
 			<div class="col-3">
-				<img id="carte00" src="#" onclick="retourne(0,0);" class="H">
-				<img id="carte01" src="#" onclick="retourne(0,1);" class="H">
+				<img id="carte00" src="#" class="H">
+				<img id="carte01" src="#" class="H">
 			</div>
 			
 			<div class="col-3">
-				<img id="carte02" src="#" onclick="retourne(0,2);" class="H" >
+				<img id="carte02" src="#" class="H" >
 			</div>
 				
 			<div class="col-3">
-				<img id="carte03" src="#" onclick="retourne(0,3);" class="H">
+				<img id="carte03" src="#" class="H">
 			</div>
 				
 			<div class="col-3">
-				<img id="carte04" src="#" onclick="retourne(0,4);" class="H">
-				<img id="carte05" src="#" onclick="retourne(0,5);" class="H">
+				<img id="carte04" src="#" class="H">
+				<img id="carte05" src="#" class="H">
 			</div>
 			
 		</div>
             
-            <div class="row justify-content-center">
+        <div class="row justify-content-center">
 				
-				<div class="col-3">
-					<img id="carte10" src="#" onclick="retourne(1,0);"  class="H">	
-					<img id="carte11" src="images/backs/back.png" onclick="retourne(1,1);">
-				</div>
+			<div class="col-3">
+				<img id="carte10" src="#" class="H">	
+				<img id="carte11" src="images/backs/back.png" onclick="retourne(1,1);">
+			</div>
 				
-				<div class="col-3">
-					<img id="carte12" src="images/backs/back.png" onclick="retourne(1,2);">
-				</div>
+			<div class="col-3">
+				<img id="carte12" src="images/backs/back.png" onclick="retourne(1,2);">
+			</div>
 				
-				<div class="col-3">
-					<img id="carte13" src="images/backs/back.png" onclick="retourne(1,3);">
-				</div>
+			<div class="col-3">
+				<img id="carte13" src="images/backs/back.png" onclick="retourne(1,3);">
+			</div>
 				
-				<div class="col-3">
-					<img id="carte14" src="images/backs/back.png" onclick="retourne(1,4);">
-					<img id="carte15" src="#" onclick="retourne(1,5);"  class="H">
-				</div>
+			<div class="col-3">
+				<img id="carte14" src="images/backs/back.png" onclick="retourne(1,4);">
+				<img id="carte15" src="#" class="H">
+			</div>
 			
-            </div>
+        </div>
             
-            <div class="row justify-content-center">
-			
-				<div class="col-3">
-					<img id="carte20" src="#" onclick="retourne(2,0);"  class="H">
-					<img id="carte21" src="images/backs/back.png" onclick="retourne(2,1);">
-				</div>
-			
-				<div class="col-3">
-					<img id="carte22" src="images/backs/back.png" onclick="retourne(2,2);">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte23" src="images/backs/back.png" onclick="retourne(2,3);">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte24" src="images/backs/back.png" onclick="retourne(2,4);">
-					<img id="carte25" src="#" onclick="retourne(2,5);" class="H">
-				</div>
-			
+		<div class="row justify-content-center">
+		
+			<div class="col-3">
+				<img id="carte20" src="#" class="H">
+				<img id="carte21" src="images/backs/back.png" onclick="retourne(2,1);">
 			</div>
 		
-			<div class="row justify-content-center">
-				
-				<div class="col-3">
-					<img id="carte30" src="#" onclick="retourne(3,0);"  class="H">
-					<img id="carte31" src="images/backs/back.png" onclick="retourne(3,1);">
-				</div>
+			<div class="col-3">
+				<img id="carte22" src="images/backs/back.png" onclick="retourne(2,2);">
+			</div>
 			
-				<div class="col-3">
-					<img id="carte32" src="images/backs/back.png" onclick="retourne(3,2);">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte33" src="images/backs/back.png" onclick="retourne(3,3);">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte34" src="images/backs/back.png" onclick="retourne(3,4);">
-					<img id="carte35" src="#" onclick="retourne(3,5);"  class="H">
-				</div>
+			<div class="col-3">
+				<img id="carte23" src="images/backs/back.png" onclick="retourne(2,3);">
+			</div>
 			
+			<div class="col-3">
+				<img id="carte24" src="images/backs/back.png" onclick="retourne(2,4);">
+				<img id="carte25" src="#" class="H">
 			</div>
 		
-			<div class="row justify-content-center">
-				
-				<div class="col-3">
-					<img id="carte40" src="#" onclick="retourne(4,0);"  class="H">
-					<img id="carte41" src="images/backs/back.png" onclick="retourne(4,1);">
-				</div>
+		</div>
+		
+		<div class="row justify-content-center">
 			
-				<div class="col-3">
-					<img id="carte42" src="images/backs/back.png" onclick="retourne(4,2);">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte43" src="images/backs/back.png" onclick="retourne(4,3);">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte44" src="images/backs/back.png" onclick="retourne(4,4);">
-					<img id="carte45" src="#" onclick="retourne(4,5);"  class="H">
-				</div>
-			
+			<div class="col-3">
+				<img id="carte30" src="#" class="H">
+				<img id="carte31" src="images/backs/back.png" onclick="retourne(3,1);">
 			</div>
 		
-			<div class="row justify-content-center">
-				
-				<div class="col-3">
-					<img id="carte50" src="#" onclick="retourne(5,0);"  class="H">
-					<img id="carte51" src="#" onclick="retourne(5,1);"  class="H">
-				</div>
-			
-				<div class="col-3">
-					<img id="carte52" src="#" onclick="retourne(5,2);"  class="H">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte53" src="#" onclick="retourne(5,3);" class="H">
-				</div>
-				
-				<div class="col-3">
-					<img id="carte54" src="#" onclick="retourne(5,4);"  class="H">
-					<img id="carte55" src="#" onclick="retourne(5,5);"  class="H">
-				</div>
-			
+			<div class="col-3">
+				<img id="carte32" src="images/backs/back.png" onclick="retourne(3,2);">
 			</div>
+			
+			<div class="col-3">
+				<img id="carte33" src="images/backs/back.png" onclick="retourne(3,3);">
+			</div>
+			
+			<div class="col-3">
+				<img id="carte34" src="images/backs/back.png" onclick="retourne(3,4);">
+				<img id="carte35" src="#" class="H">
+			</div>
+		
+		</div>
+		
+		<div class="row justify-content-center">
+			
+			<div class="col-3">
+				<img id="carte40" src="#" class="H">
+				<img id="carte41" src="images/backs/back.png" onclick="retourne(4,1);">
+			</div>
+		
+			<div class="col-3">
+				<img id="carte42" src="images/backs/back.png" onclick="retourne(4,2);">
+			</div>
+			
+			<div class="col-3">
+				<img id="carte43" src="images/backs/back.png" onclick="retourne(4,3);">
+			</div>
+			
+			<div class="col-3">
+				<img id="carte44" src="images/backs/back.png" onclick="retourne(4,4);">
+				<img id="carte45" src="#" class="H">
+			</div>
+		
+		</div>
+		
+		<div class="row justify-content-center">
+			
+			<div class="col-3">
+				<img id="carte50" src="#" class="H">
+				<img id="carte51" src="#" class="H">
+			</div>
+		
+			<div class="col-3">
+				<img id="carte52" src="#" class="H">
+			</div>
+			
+			<div class="col-3">
+				<img id="carte53" src="#" class="H">
+			</div>
+			
+			<div class="col-3">
+				<img id="carte54" src="#" class="H">
+				<img id="carte55" src="#" class="H">
+			</div>
+		
+		</div>
 
     </section>
 
@@ -291,9 +291,9 @@ include('include/gagne.inc.php');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 
-	<!-- Le Gasp : fichier JS pour le jeu -->
+<!-- Le Gasp : fichier JS pour le jeu -->
 
-	<script src="js/game.js"></script>
+<script src="js/game.js"></script>
 
 <script type="text/javascript">
 
