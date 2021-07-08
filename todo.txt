@@ -1,0 +1,28 @@
+TODO LIST
+---------
+
+- caractères spéciaux dans mon JS
+- revoir possition des { }
+
+- commenter CSS / JS / PHP
+
+- Options : dans la modale, ça doit être des miniatures
+- optimiser la fenêtre des options pour la version mobile
+
+- faire le texte des options
+- textes dans fr.php
+- créer une version anglaise
+- les constantes PHP dans JS.
+
+- quand a changé le fond -> cover
+
+- plus de PHP du tout ? XD
+
+- document.write serait à bannir
+
+BUGFIX
+------
+
+- sur la page index.php le bouton pour une nouvelle partie ne change pas de langue
+- dans le fichier en.php les alt et les title sont encore en français
+- à vérifier : les anglais n'écrive pas n°1 mais #1 
