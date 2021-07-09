@@ -166,8 +166,7 @@ function retourne(xc, yc) {
 			if (grille[x][y] == "O") {
 				document.getElementById("carte" + x.toString() + y.toString()).src = "images/carte" + x.toString() + y.toString() + ".png";
 				grille[x][y] = "X";
-			}
-			else {
+			} else {
 				document.getElementById("carte" + x.toString() + y.toString()).src = dos;
 				grille[x][y] = "O";
 			}
@@ -249,7 +248,7 @@ var ListCard = ["carte11","carte12","carte13","carte14","carte21","carte22","car
 
 for (i = 0; i < ListCard.length; i++) {
 	document.getElementById(ListCard[i]).src = dos; ;
-	}
+}
 
 /* On récupére le fond que le joueur à choisi et on personnalise ! */
 /* Si pas de session alors on applique le dos par défaut */

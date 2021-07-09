@@ -43,17 +43,3 @@ function ModaleImage($images, $alt)
     </div>';
     }
 
-/* -------------------------------- */
-/* Cette fonction affiche le footer */
-/* -------------------------------- */
-
-/*
-function footer()
-    {
-    echo '<p>';
-    echo "© 2018-".date('Y')." - Alexis AMAND<br />";
-	echo FOOTER_TEXT;
-    echo '</p>';
-    }
-*/
-

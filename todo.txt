@@ -11,11 +11,6 @@ BUGFIX SUR LE CODE
 - plus de PHP du tout ? XD
 - document.write serait à bannir
 
-BUGFIX SUR LES TRADUCTIONS
---------------------------
-
-- dans le fichier en.php les alt et les title sont encore en français
-
 BUGFIX SUR LA VERSION MOBILE
 ----------------------------
 
