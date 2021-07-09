@@ -152,7 +152,7 @@ include('langues/'.ChoixLangue().'.php');
     
 			<p class="text-justify"><?php echo IND_TEXT_2; ?></p>
 
-            <button class="nav-item nav-link btn btn-primary mx-auto my-5" href="#" data-toggle="modal" data-target="#ModalNouvellePartie">Commencer une partie !</button>
+            <button class="nav-item nav-link btn btn-primary mx-auto my-5" href="#" data-toggle="modal" data-target="#ModalNouvellePartie"><?php echo IND_START; ?></button>
 
     
 			<div class="row">

@@ -14,13 +14,13 @@ function Version() {
 				imageDrapeau = '<a href="?langue=en"><img class="ml-2 icone" src="images/icones/flag-en.svg"></a>';
 				break;
 			default:
-				imageDrapeau = '<a href="?langue=en"><img class="ml-2 icone" src="images/icones/flag-fr.svg"></a>';
+				imageDrapeau = '<a href="?langue=en"><img class="ml-2 icone" src="images/icones/flag-en.svg"></a>';
 				break;
 		}
 	} else {
-		imageDrapeau = '<a href="?langue=fr"><img class="ml-2 icone" src="images/icones/flag-fr.svg"></a>';
+		imageDrapeau = '<a href="?langue=en"><img class="ml-2 icone" src="images/icones/flag-en.svg"></a>';
 	}	
-	document.getElementById('version').innerHTML = "Version 0.17.73b "+ imageDrapeau;
+	document.getElementById('version').innerHTML = "Version 0.17.76b "+ imageDrapeau;
 }
 
 /* ------------------------------------------ */
