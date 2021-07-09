@@ -101,7 +101,7 @@ define("FM_NO", "Non");
 /* Fenêtre modale - A propos */
 
 define("FM_AB_TITLE", "Règles du jeu");
-define("FM_AB_TEXT","<p>Il s'agit d'un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 cartes formant un carré 4 x 4. Le but est de toutes les retourner en respectant une seule règle : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p><p>Il existe des solutions en 6, 8 ou 10 coups.</p>");
+define("FM_AB_TEXT","<p>Le Gasp est un petit jeu de réflexion qui est un petit mélange de Reverso et d'Othello. Vous disposez d'un plateau de jeu avec 16 cartes formant un carré 4 x 4. Le but est de toutes les retourner en respectant une seule règle : Quand vous désignez une carte, ses 8 voisines sont retournées sauf elle. Saurez-vous toutes les retourner ?</p><p>Il existe des solutions en 6, 8 ou 10 coups.</p>");
 
 /* Fenêtre modale - Gagné ! */
 

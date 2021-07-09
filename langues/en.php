@@ -21,10 +21,10 @@ define("HEADER_SL","Can you turn them all over?");
 
 define("IND_TITLE","What is \"Le Gasp JS\" ?");
 
-define("IND_TEXT_1","A few months ago, I discovered an <a href='le-gasp.php?langue=".ChoixLangue()."' title='article on Le Gasp in the April/May 1985 issue of Jeux et Stratégie'>article</a> and a <a href='code-basic.php' title='listing en basic paru dans la revue Jeux et Stratégie d'avril/mai 1985 pour jouer à Le Gasp'>listing in Basic</a> published in the April/May 1985 issue of Jeux & Stratégie. It is a <strong>small puzzle game</strong> which is a mixture of Reverso and Othello. You have a board with 16 two-coloured pieces forming a 4 x 4 square. The aim is to turn over all the pieces according to one rule: when you designate a piece, its 8 neighbours change colours but it keeps its own. A few pages later, the magazine adapted the board game to Basic. It was nothing great, it was a \"text mode\" game that we would call today a \"console mode\" game. In my version, which can be <strong>played online for free</strong> and <strong>without installing any application</strong>, the pieces have been replaced by cards, but the principle is still the same: When you point to a card, its 8 neighbours are turned over except for it.");
+define("IND_TEXT_1","A few months ago, I discovered an <a href='le-gasp.php?langue=".ChoixLangue()."' title='article on The Gasp in the April/May 1985 issue of Jeux et Stratégie'>article</a> and a <a href='code-basic.php' title='basic listing in the April/May 1985 issue of Jeux et Stratégie to play'>listing in Basic</a> published in the April/May 1985 issue of Jeux & Stratégie. It is a <strong>small puzzle game</strong> which is a mixture of Reverso and Othello. You have a board with 16 two-coloured pieces forming a 4 x 4 square. The aim is to turn over all the pieces according to one rule: when you designate a piece, its 8 neighbours change colours but it keeps its own. A few pages later, the magazine adapted the board game to Basic. It was nothing great, it was a \"text mode\" game that we would call today a \"console mode\" game. In my version, which can be <strong>played online for free</strong> and <strong>without installing any application</strong>, the pieces have been replaced by cards, but the principle is still the same: When you point to a card, its 8 neighbours are turned over except for it.");
 define("IND_TEXT_2","According to the magazine I quoted above, there are 6, 8 and 10 shot solutions !");
 define("IND_START_GAME","Start a Le Gasp JS game");
-define("IND_GITHUB","If you are curious, the source code of the JS version is available on GitHub :<br /><a href='https://github.com/AlexisAmand/The-Gasp-JS' title='code source du jeu Le Gasp en JavaScript sur GitHub'>https://github.com/AlexisAmand/The-Gasp-JS</a>");
+define("IND_GITHUB","If you are curious, the source code of the JS version is available on GitHub :<br /><a href='https://github.com/AlexisAmand/The-Gasp-JS' title='source code of the game Le Gasp in JavaScript on GitHub'>https://github.com/AlexisAmand/The-Gasp-JS</a>");
 define("IND_START","Start a game !");
 
 /* Article JS de 1985 */
@@ -56,12 +56,12 @@ define("QB_FIGCAPTION_2",'The Gasp Game in Qbasic');
 /* Code VB.Net */
 
 define("VBN_TITLE","The Gasp (VB.Net version)");
-define("VBN_TEXT","The Qbasic version works without much question, but it is not very pretty. One could imagine colours or a message indicating that the player has succeeded. That's how the VB.Net version was born! I just replaced the counters by cards. This time, the source code is not at your disposal, but you can <a href='sources/VBnet/legasp-vbnet.zip' title='Télécharger la version du jeu 'Le Gasp' développée en VB.Net'>download the executable</a> (you have to unzip the file, then run the setup.msi file) to try the game at home, quietly. Little extra: You can choose a 4 x 4 grid or a 5 x 5 grid depending on the level of difficulty you want.");
+define("VBN_TEXT","The Qbasic version works without much question, but it is not very pretty. One could imagine colours or a message indicating that the player has succeeded. That's how the VB.Net version was born! I just replaced the counters by cards. This time, the source code is not at your disposal, but you can <a href='sources/VBnet/legasp-vbnet.zip' title='Download the version of the game Le Gasp developed in VB.Net'>download the executable</a> (you have to unzip the file, then run the setup.msi file) to try the game at home, quietly. Little extra: You can choose a 4 x 4 grid or a 5 x 5 grid depending on the level of difficulty you want.");
 
 /* Code JS */
 
 define("JS_TITLE","The Gasp (Javascript version)");
-define("JS_TEXT","I know that installing something on your PC these days has become complicated. You don't know where it comes from, you're afraid of cookies, tracers, viruses, malware and all the bad epidemics that are everywhere on the net. That's why I wanted to create this version of Gasp that can be played online for free. If I've done my homework, the site is even <em>mobile friendly</em>, which means that it will adapt to the medium you are using: tablet, computer or even phone. You can play by <a href='jeu.php' title='Jouer une partie du jeu gratuit Le Gasp'>clicking here</a> and as for the Basic version, the code is available on <a href='https://github.com/AlexisAmand/The-Gasp-JS' title='See the source code of the game Le Gasp on GitHub'>my GitHub</a>.");
+define("JS_TEXT","I know that installing something on your PC these days has become complicated. You don't know where it comes from, you're afraid of cookies, tracers, viruses, malware and all the bad epidemics that are everywhere on the net. That's why I wanted to create this version of Gasp that can be played online for free. If I've done my homework, the site is even <em>mobile friendly</em>, which means that it will adapt to the medium you are using: tablet, computer or even phone. You can play by <a href='jeu.php' title='Play a free game of Le Gasp'>clicking here</a> and as for the Basic version, the code is available on <a href='https://github.com/AlexisAmand/The-Gasp-JS' title='See the source code of the game Le Gasp on GitHub'>my GitHub</a>.");
 
 /* Mentions légales */
 
@@ -78,7 +78,7 @@ define("ML_COOKIES","In order to adapt to its audience, the site measures the nu
 /* Footer */
 
 define("FOOTER_TEXT","Site hosted by <a href='https://www.amen.fr/'>Amen France</a> - <a href='/mentions-legales.php'>Mentions légales</a><br />
-Game adapted by <a href='http://twitter.com/alexisamand' target='_blank' title='Alexis Amand - Développeur à Valenciennes'>Alexis AMAND</a> based from Francis Piault and Michel Brassinne</a>");
+Game adapted by <a href='http://twitter.com/alexisamand' target='_blank' title='Alexis Amand - Developer in Valenciennes'>Alexis AMAND</a> based from Francis Piault and Michel Brassinne</a>");
 
 /* Fenêtres modales - textes en communs */
 
@@ -102,7 +102,7 @@ define("FM_NO", "No");
 /* Fenêtre modale - A propos */
 
 define("FM_AB_TITLE", "Rules");
-define("FM_AB_TEXT","<p>This is a small puzzle game that is a mix of Reverso and Othello. You have a board with 16 cards forming a 4 x 4 square. The goal is to turn over all of them according to one rule: When you point to a card, all 8 of its neighbours are turned over except for it. Can you turn them all over?</p><p>There are 6, 8 or 10 moves solutions.</p>");
+define("FM_AB_TEXT","<p>The Gasp is a small puzzle game that is a mix of Reverso and Othello. You have a board with 16 cards forming a 4 x 4 square. The goal is to turn over all of them according to one rule: When you point to a card, all 8 of its neighbours are turned over except for it. Can you turn them all over?</p><p>There are 6, 8 or 10 moves solutions.</p>");
 
 /* Fenêtre modale - Gagné ! */
 

@@ -16,11 +16,6 @@ BUGFIX SUR LES TRADUCTIONS
 
 - dans le fichier en.php les alt et les title sont encore en français
 
-BUGFIX SUR LES TEXTES
----------------------
-
-- Dans la modale des règles du jeu : vérif ortho et mettre "Le Gasp est un petit" à la place de "Il s'agit d'un..."
-
 BUGFIX SUR LA VERSION MOBILE
 ----------------------------
 

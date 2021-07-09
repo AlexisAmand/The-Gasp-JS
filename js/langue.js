@@ -20,7 +20,7 @@ function Version() {
 	} else {
 		imageDrapeau = '<a href="?langue=en"><img class="ml-2 icone" src="images/icones/flag-en.svg"></a>';
 	}	
-	document.getElementById('version').innerHTML = "Version 0.17.73b "+ imageDrapeau;
+	document.getElementById('version').innerHTML = "Version 0.17.76b "+ imageDrapeau;
 }
 
 /* ------------------------------------------ */
