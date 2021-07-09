@@ -31,8 +31,8 @@ define("IND_START","Start a game !");
 
 define("AJS_TITLE","The 1985 article");
 define("AJS_TEXT","Note: In the article below, I have hidden the ten move solution for the 4 x 4 grid.");
-define("AJS_FIGCAPTION_1","(source: Jeux &amp; Stratégie n°38 - april/may 1985)");
-define("AJS_FIGCAPTION_2","(source: Jeux &amp; Stratégie n°38 - april/may 1985)");
+define("AJS_FIGCAPTION_1","(source: Jeux &amp; Stratégie #38 - april/may 1985)");
+define("AJS_FIGCAPTION_2","(source: Jeux &amp; Stratégie #38 - april/may 1985)");
 
 /* Une partie */
 
@@ -41,7 +41,7 @@ define("GAME_SCORE","Number of moves");
 /* Code basic */
 
 define("BAS_TITLE","The Gasp (Basic version)");
-define("BAS_FIGCAPTION_1","(source: Jeux &amp; Stratégie n°38 - april/may 1985)");
+define("BAS_FIGCAPTION_1","(source: Jeux &amp; Stratégie #38 - april/may 1985)");
 
 /* Code QBasic */
 
