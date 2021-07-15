@@ -1,16 +1,3 @@
-- voir si fichiers pas utiles.
-
-BUGFIX SUR LE CODE
-------------------
-
-- caractères spéciaux dans mon JS
-- revoir possition des { }
-- commenter CSS / JS / PHP
-- les constantes PHP dans JS.
-- quand a changé le fond -> cover
-- plus de PHP du tout ? XD
-- document.write serait à bannir
-
 BUGFIX SUR LA VERSION MOBILE
 ----------------------------
 
@@ -20,4 +7,15 @@ OPTIMISATION JEU
 ----------------
 
 - Le son de retournement des cartes n'est pas top
-    -> trouver un son libre de droits pour le remplacer
+    -> trouver un son libre de droits pour le remplacer*
+
+- voir si fichiers pas utiles.
+
+- supprimer les document.write() ?
+- passer en https 
+- compresser js et css
+- il y a un soucis avec le chargement des images de la fenêtre option, ça ralenti la page
+
+- tarteaucitron.js via npm pour avoir les versions minifiées ?
+
+- passage à BT 5 via npm ?

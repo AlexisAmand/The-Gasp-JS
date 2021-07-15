@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "tarteaucitronjs": "^1.9.3"
+  }
+}
