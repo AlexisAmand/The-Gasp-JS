@@ -19,8 +19,8 @@ Pour une grille 4 x 4, il existe des solutions en 6, 8 ou 10 coups.
 Le jeu est proposé ici avec une grille en 4 x 4, mais vous pouvez imaginer des versions avec une grille 5 x 5, voire même 8 x 8 !
 
 A découvrir sur : 
-http://thegasp.genealexis.fr/index.php?langue=en (en)
-http://thegasp.genealexis.fr/index.php?langue=fr (fr)
+- http://thegasp.genealexis.fr/index.php?langue=en (en)
+- http://thegasp.genealexis.fr/index.php?langue=fr (fr)
 
 
 ![alt text](http://thegasp.genealexis.fr/images/captures/thumbs/thegasp01.jpg)
