@@ -55,7 +55,8 @@ define("QB_FIGCAPTION_2",'Le Jeu "Le Gasp" en Qbasic');
 /* Code VB.Net */
 
 define("VBN_TITLE","Le Gasp (version VB.Net)");
-define("VBN_TEXT","La version Qbasic fonctionne sans trop se poser de question, mais il faut avouer qu'elle n'est pas très jolie. On pourrait imaginer des couleurs ou un message qui indique que le joueur à réussi. C'est ainsi qu'est née la version en VB.Net ! J'ai juste remplacé les pions par des cartes. Cette fois, le code source n'est pas à votre disposition, mais vous pouvez <a href='sources/VBnet/legasp-vbnet.zip' title='Télécharger la version du jeu 'Le Gasp' développée en VB.Net'>télécharger l'executable</a> (il faut dézipper le fichier, puis executer le fichier setup.msi) pour essayer le jeu chez vous, tranquillement. Petit plus : Vous pouvez y choisir une grille 4 x 4 ou une grille 5 x 5 selon le niveau de difficulté que vous désirez.");
+define("VBN_TEXT","La version Qbasic fonctionne sans trop se poser de question, mais il faut avouer qu'elle n'est pas très jolie. On pourrait imaginer des couleurs ou un message qui indique que le joueur à réussi. C'est ainsi qu'est née la version en VB.Net ! J'ai juste remplacé les pions par des cartes. Cette fois, le code source n'est pas à votre disposition, mais vous pouvez <a href='https://alexisamand.itch.io/le-gasp' title='Télécharger la version du jeu 'Le Gasp' développée en VB.Net'>télécharger le jeu</a> pour essayer le jeu chez vous, tranquillement. Petit plus : Vous pouvez y choisir une grille 4 x 4 ou une grille 5 x 5 selon le niveau de difficulté que vous désirez.");
+define("VBN_TEXT_2","Il existe aussi une version jouable sans connexion internet via une petite application disponible sur <a href='https://alexisamand.itch.io/le-gasp' title='Télécharger la version du jeu 'Le Gasp' développée en VB.Net'>itch.io</a>. Petit plus : Vous pouvez y choisir une grille 4 x 4 ou une grille 5 x 5 selon le niveau de difficulté que vous désirez.");
 
 /* Code JS */
 

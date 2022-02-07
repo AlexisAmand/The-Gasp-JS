@@ -18,4 +18,9 @@ OPTIMISATION JEU
 
 - tarteaucitron.js via npm pour avoir les versions minifiées ?
 
-- passage à BT 5 via npm ?
+
+
+- jquery et popper peut-être à supprimer
+
+
+bootstrap-lightbox.css ?

@@ -8,21 +8,27 @@ include('langues/'.ChoixLangue().'.php');
 
 <head>
 
+	<!-- Required meta tags -->
 	<meta charset="utf-8">
 
-	<title>Jouer à Le Gasp - jeu gratuit sur navigateur, mélange de Reversi et Othello (version Javascript)</title>
-	<meta name="description" content="Le Gasp est un jeu de cartes gratuit en pour jouer en solitaire sur ordinateur, tablette et mobile. A l'origine développé en Basic, puis en Qbasic, il est maintenant disponible dans une version en JavaScript jouable en ligne.">
+	<title>Le Gasp - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
+	<meta name="description" content="Le Gasp est un jeu de cartes gratuit en pour jouer en solitaire sur PC. A l'origine développé en Basic, puis en Qbasic, il est maintenant disponible dans une version en JavaScript.">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- style perso et Bootstrap -->	
+	<!-- style perso et Bootstrap -->
+	
 	<link rel="stylesheet" href="css/game.css">
 	<link rel="stylesheet" href="css/bootstrap.perso.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet"> 	
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet"> 
+	
 	<link rel="icon" type="image/png" href="images/icones/cards_01-512.png" />
 
+
+
 	<!-- code pour le RGPD -->
-    <script type="text/javascript" src="/node_modules/tarteaucitronjs/tarteaucitron.js"></script>
+
+    <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
 
         <script type="text/javascript">
         tarteaucitron.init({
@@ -67,9 +73,11 @@ include('langues/'.ChoixLangue().'.php');
         </script>
 
 		<!-- Matomo via Tarte au citron -->
+
         <script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
 
 		<!-- Le Gasp : fichier js pour les langues -->
+
 		<script src="js/langue.js"></script>
 				
 </head>
@@ -268,22 +276,23 @@ include('langues/'.ChoixLangue().'.php');
 </footer>
 
 <?php 
-/* Les 4 fenêtres modales nécessaires sur la page */
 include('include/options.inc.php');  
 include('include/nouvellepartie.inc.php'); 
 include('include/apropos.inc.php');
 include('include/gagne.inc.php');
 ?>
 
-<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <!-- Le Gasp : fichier JS pour le jeu -->
 <!-- C'est aussi ce fichier qui s'occupe de garder en mémoire la personnification -->
+
 <script src="js/game.js"></script>
 
 <!-- code Matomo pour Tarte au citron -->
+      
 <script type="text/javascript">
 tarteaucitron.user.matomoId = 13;
 (tarteaucitron.job = tarteaucitron.job || []).push('matomo');

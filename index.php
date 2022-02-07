@@ -8,27 +8,33 @@ include('langues/'.ChoixLangue().'.php');
 
 <head>
 	
+	<!-- Required meta tags -->
     <meta charset="utf-8">
     
-    <title>Le Gasp - Un jeu gratuit sur navigateur, mélange de Reversi et Othello (version Javascript)</title>
-	<meta name="description" content="Le Gasp est un jeu de cartes gratuit jouable en solitaire sur navigateur sur ordinateur, mobile et tablette. A l'origine développé en Basic, puis en Qbasic, il est maintenant disponible dans une version en JavaScript.">
+    <title>Le Gasp - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
+	<meta name="description" content="Le Gasp est un jeu de cartes gratuit via navigateur pour jouer en solitaire sur PC. A l'origine développé en Basic, puis en Qbasic, il est maintenant disponible dans une version en JavaScript.">
       
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- style perso et Bootstrap -->
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.perso.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
+	
 	<link rel="icon" type="image/png" href="images/icones/cards_01-512.png" />
 
 	<!-- vérifs de Google -->
+
 	<meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />
 
 	<!-- Le Gasp : fichier JS pour le jeu -->
+
 	<script src="js/game.js"></script>
 
     <!-- code pour le RGPD -->
-    <script type="text/javascript" src="/node_modules/tarteaucitronjs/tarteaucitron.js"></script>
+
+    <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
 
         <script type="text/javascript">
         tarteaucitron.init({
@@ -73,9 +79,11 @@ include('langues/'.ChoixLangue().'.php');
         </script>
 
         <!-- Matomo via Tarte au citron -->
+
 		<script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
 
 		<!-- Le Gasp : fichier js pour les langues -->
+
 		<script src="js/langue.js"></script>
 
 </head>
@@ -145,7 +153,8 @@ include('langues/'.ChoixLangue().'.php');
 			<p class="text-justify"><?php echo IND_TEXT_2; ?></p>
 
             <button class="nav-item nav-link btn btn-primary mx-auto my-5" href="#" data-toggle="modal" data-target="#ModalNouvellePartie"><?php echo IND_START; ?></button>
- 
+
+    
 			<div class="row">
 
 			<?php
@@ -168,14 +177,26 @@ include('langues/'.ChoixLangue().'.php');
             <a href="jeu.php?langue=<?php echo ChoixLangue(); ?>" title="Lancer une partie gratuite de Le Gasp JS"><?php echo IND_START_GAME; ?></a></p>
     
             <p class="text-center mt-4 mb-2"><?php echo IND_GITHUB; ?></p>
+
+		<h4 class="mt-4"><?php echo VBN_TITLE; ?></h4>
+	
+		<p class="mt-4 text-justify"><?php echo VBN_TEXT_2; ?></p>
+		
+		<p class="text-center">
+			<img src="images/captures/thumbs/thegasp-01.jpg" class="img-thumbnail m-3 rounded float-none" alt="Capture d'écran de la version développée en VB.Net du jeu 'Le Gasp'">  
+			<img src="images/captures/thumbs/thegasp-03.jpg" class="img-thumbnail m-3 rounded float-none" alt="Capture d'écran de la version développée en VB.Net du jeu 'Le Gasp'">
+		</p>	
             	
 	</article>
                 
     <?php 
+
 	/* Le pied de page */
+
 	include('include/footer.inc.php');
 	
-	/* Les 3 fenêtres modales nécessaires sur la page */
+	/* Les 7 fenêtres modales nécessaires sur la page */
+
     include('include/options.inc.php');
     include('include/nouvellepartie.inc.php'); 
     include('include/apropos.inc.php');
@@ -184,15 +205,17 @@ include('langues/'.ChoixLangue().'.php');
 		{
 		ModaleImage($i, "capture d\'écran d\'une partie du jeu Le Gasp en JavaScript");
 		}
+
     ?>
 
 </section>
 
-<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
       
 <!-- code Matomo pour Tarte au citron -->
+      
 <script type="text/javascript">
 tarteaucitron.user.matomoId = 13;
 (tarteaucitron.job = tarteaucitron.job || []).push('matomo');

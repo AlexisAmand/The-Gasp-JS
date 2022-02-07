@@ -8,23 +8,26 @@ include('langues/'.ChoixLangue().'.php');
 
 <head>
 	
+	<!-- Required meta tags -->
     <meta charset="utf-8">
     
-    <title>Mentions Légales de Le Gasp - Un jeu gratuit sur navigateur, mélange de Reversi et Othello (version Javascript)</title>
+    <title>Mentions Légales - Un jeu gratuit, mélange de Reversi et Othello (version Javascript)</title>
 	<meta name="description" content=" ">
       
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- style perso et Bootstrap --> 
+    <!-- style perso et Bootstrap -->
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.perso.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
+	
 	<link rel="icon" type="image/png" href="images/icones/cards_01-512.png" />
 
     <!-- code pour le RGPD -->
 
-    <script type="text/javascript" src="/node_modules/tarteaucitronjs/tarteaucitron.js"></script>
-	
+    <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
+
         <script type="text/javascript">
         tarteaucitron.init({
     	  "privacyUrl": "", /* Privacy policy url */
@@ -68,9 +71,11 @@ include('langues/'.ChoixLangue().'.php');
         </script>
 
         <!-- Matomo via Tarte au citron -->
+
         <script>tarteaucitron.user.matomoHost = '//genealexis.fr/piwik/';</script>
 
 		<!-- Le Gasp : fichier js pour les langues -->
+
 		<script src="js/langue.js"></script>
 
 </head>
@@ -156,10 +161,13 @@ include('langues/'.ChoixLangue().'.php');
 	</article>
                 	
     <?php 
+
 	/* Le pied de page */
+
 	include('include/footer.inc.php');
 
-	/* Les 3 fenêtres modales nécessaires sur la page */
+	/* Les 7 fenêtres modales nécessaires sur la page */
+
     include('include/options.inc.php'); 
     include('include/nouvellepartie.inc.php');
     include('include/apropos.inc.php'); 
@@ -167,17 +175,19 @@ include('langues/'.ChoixLangue().'.php');
 
 </section>
 
-<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
       
 <!-- code Matomo pour Tarte au citron -->
+      
 <script type="text/javascript">
 tarteaucitron.user.matomoId = 13;
 (tarteaucitron.job = tarteaucitron.job || []).push('matomo');
 </script>
 
 <!-- Le Gasp : fichier JS pour le jeu -->
+
 <script src="js/game.js"></script>
 
 </body>
